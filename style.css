@@ -985,7 +985,6 @@ footer {
 }
 
 /* === Универсальная адаптация под мобильные === */
-/* === Универсальная адаптация и уменьшение блоков === */
 
 /* Сетки: проекты, карточки, галерея, продукты */
 .wrap,
@@ -1057,12 +1056,13 @@ button,
 /* === Блок "Мощности / Качество / Поставки" === */
 .power-quality-supplies {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 блока в ряд по умолчанию */
+  grid-template-columns: repeat(3, 1fr); /* 3 блока в ряд на десктопе */
   gap: 15px;
 }
 
 /* === Адаптация под планшеты === */
 @media (max-width: 992px) {
+  /* Сетки карточек и галерей */
   .wrap,
   .projects-grid,
   .achievements-grid,
@@ -1074,6 +1074,7 @@ button,
     gap: 12px;
   }
 
+  /* Блоки "Мощности / Качество / Поставки" */
   .power-quality-supplies {
     grid-template-columns: repeat(2, 1fr); /* 2 блока в ряд */
   }
@@ -1093,7 +1094,7 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо одной */
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
     gap: 10px;
   }
 
@@ -1144,7 +1145,7 @@ footer .supplies {
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: 1fr; /* на очень узких экранах одна колонка */
+    grid-template-columns: 1fr; /* одна колонка */
   }
 
   button,
@@ -1154,6 +1155,5 @@ footer .supplies {
     padding: 5px 8px;
   }
 }
-
 
 }
