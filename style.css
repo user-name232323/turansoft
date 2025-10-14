@@ -987,7 +987,9 @@ footer {
 /* === Универсальная адаптация под мобильные === */
 /* === Универсальная адаптация с горизонтальной компоновкой === */
 
-/* Сетки: проекты, карточки, галерея, продукты */
+/* === Универсальная адаптация с двухколоночной сеткой для мобильных === */
+
+/* Основная сетка для всех блоков */
 .wrap,
 .projects-grid,
 .achievements-grid,
@@ -996,8 +998,9 @@ footer {
 .cards,
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* минимальная ширина блока 140px, максимум 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* минимальная ширина 130px, максимум 1fr */
   gap: 10px;
+  justify-items: center;
 }
 
 /* Карточки */
@@ -1006,7 +1009,7 @@ footer {
 .product-card,
 .card {
   width: 100%;
-  max-width: 200px; /* уменьшаем реальные размеры */
+  max-width: 180px; /* немного больше для читаемости */
   flex-direction: column;
   margin: 0 auto;
 }
@@ -1033,7 +1036,7 @@ footer {
 .geo-text,
 .analysis-text {
   text-align: center;
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   padding: 4px;
 }
 
@@ -1055,7 +1058,7 @@ button,
   border-radius: 5px;
 }
 
-/* === Адаптация под планшеты === */
+/* === Планшеты === */
 @media (max-width: 992px) {
   .wrap,
   .projects-grid,
@@ -1073,7 +1076,7 @@ button,
   h3 { font-size: 1em; }
 }
 
-/* === Адаптация под мобильные устройства === */
+/* === Мобильные устройства === */
 @media (max-width: 600px) {
   .wrap,
   .projects-grid,
@@ -1082,7 +1085,7 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* минимум 120px — позволяет хотя бы 2 колонки при ширине ~250px */
+    grid-template-columns: repeat(2, 1fr); /* всегда 2 колонки */
     gap: 6px;
   }
 
@@ -1095,7 +1098,5 @@ button,
     display: inline-block;
   }
 }
-
-
 
 }
