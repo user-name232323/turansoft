@@ -985,11 +985,7 @@ footer {
 }
 
 /* === Универсальная адаптация под мобильные === */
-/* === Универсальная адаптация с горизонтальной компоновкой === */
-
-/* === Универсальная адаптация с двухколоночной сеткой для мобильных === */
-
-/* Основная сетка для всех блоков */
+/* Карточки, проекты, галерея */
 .wrap,
 .projects-grid,
 .achievements-grid,
@@ -998,9 +994,9 @@ footer {
 .cards,
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); /* минимальная ширина 130px, максимум 1fr */
-  gap: 10px;
-  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* минимальная ширина карточки */
+  gap: 15px;
+  justify-items: center; /* центрируем карточки по горизонтали */
 }
 
 /* Карточки */
@@ -1009,9 +1005,10 @@ footer {
 .product-card,
 .card {
   width: 100%;
-  max-width: 180px; /* немного больше для читаемости */
+  max-width: 180px; /* уменьшенные реальные размеры */
   flex-direction: column;
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 
 /* Изображения */
@@ -1026,7 +1023,7 @@ footer {
   width: 100%;
   height: auto;
   object-fit: cover;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 /* Текст */
@@ -1036,7 +1033,7 @@ footer {
 .geo-text,
 .analysis-text {
   text-align: center;
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   padding: 4px;
 }
 
@@ -1046,7 +1043,7 @@ footer {
 .contact-form {
   flex-direction: column;
   width: 100%;
-  padding: 4px;
+  padding: 5px;
 }
 
 /* Кнопки */
@@ -1054,11 +1051,11 @@ button,
 .cta,
 .whatsapp-button {
   font-size: 12px;
-  padding: 5px 8px;
-  border-radius: 5px;
+  padding: 6px 10px;
+  border-radius: 6px;
 }
 
-/* === Планшеты === */
+/* === Адаптация под планшеты === */
 @media (max-width: 992px) {
   .wrap,
   .projects-grid,
@@ -1067,8 +1064,8 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 8px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
   }
 
   h1 { font-size: 1.2em; }
@@ -1076,7 +1073,7 @@ button,
   h3 { font-size: 1em; }
 }
 
-/* === Мобильные устройства === */
+/* === Адаптация под мобильные === */
 @media (max-width: 600px) {
   .wrap,
   .projects-grid,
@@ -1085,8 +1082,8 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(2, 1fr); /* всегда 2 колонки */
-    gap: 6px;
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
+    gap: 10px;
   }
 
   h1 { font-size: 1em; }
@@ -1094,9 +1091,33 @@ button,
   h3 { font-size: 0.9em; }
 
   nav a {
-    margin: 4px 6px;
+    margin: 5px 8px;
     display: inline-block;
   }
 }
 
+/* === Очень маленькие экраны (до 400px) === */
+@media (max-width: 400px) {
+  .wrap,
+  .projects-grid,
+  .achievements-grid,
+  .products-grid,
+  .gallery,
+  .cards,
+  .grid-3 {
+    grid-template-columns: 1fr; /* 1 колонка на очень маленьких экранах */
+    gap: 8px;
+  }
+
+  h1 { font-size: 0.95em; }
+  h2 { font-size: 0.9em; }
+  h3 { font-size: 0.85em; }
+
+  button,
+  .cta,
+  .whatsapp-button {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
+}
 }
