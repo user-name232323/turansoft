@@ -1105,7 +1105,6 @@ button,
     flex-wrap: wrap !important;             /* чтобы адаптировалось при узком экране */
     text-align: center !important;
   }
-
   .power-quality-supplies .power-block,
   .power-quality-supplies .quality-block {
     flex: 1 1 45% !important;               /* по 45% ширины — две колонки */
@@ -1196,31 +1195,31 @@ button,
     padding: 10px 18px !important;
   }
 
-  /* Блоки "Мощности / Качество / Поставки" */
-  .power-quality-supplies {
+#home .grid-3 {
     display: grid !important;
     grid-template-columns: 1fr 1fr !important; /* 2 блока в ряд */
     gap: 10px !important;
+    align-items: stretch !important;
   }
 
-  /* Блок Качество */
-  .power-quality-supplies .quality-block {
-    grid-column: 1; /* первый столбец */
+  /* Карточки одинаковой высоты и с переносом текста */
+  #home .grid-3 .card {
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: center !important;
+    text-align: center !important;
+    padding: 12px !important;
+    box-sizing: border-box !important;
+    height: auto !important;
   }
 
-  /* Блок Поставки */
-  .power-quality-supplies .supplies-block {
-    grid-column: 2; /* второй столбец */
+  /* Исправляем текст в Поставках */
+  #home .grid-3 .card .muted {
     white-space: normal !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    text-align: center !important;
-    padding: 10px !important;
-    max-width: 100% !important;
-    box-sizing: border-box !important;
-  h1 { font-size: 1em; }
-  h2 { font-size: 1em; }
-  h3 { font-size: 0.9em; }
+    font-size: 14px !important;
+    line-height: 1.4 !important;
   }
 
   nav a {
