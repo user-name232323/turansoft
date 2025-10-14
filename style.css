@@ -1108,29 +1108,30 @@ button,
 
   /* Блоки "Мощности / Качество / Поставки" */
   .power-quality-supplies {
+    display: grid !important;
     grid-template-columns: 1fr 1fr !important; /* 2 блока в ряд */
-    grid-auto-rows: auto !important;
     gap: 10px !important;
   }
 
-  /* Третий блок (Поставки) переносим на новую строку */
-  .power-quality-supplies .supplies-block,
-  .supplies-block,
-  #supplies,
-  footer .supplies {
-    grid-column: 1 / -1 !important; /* занимает всю ширину */
-    white-space: normal !important;      /* разрешаем перенос слов */
-    word-wrap: break-word !important;    /* перенос длинных слов */
-    overflow-wrap: break-word !important; /* дополнительная страховка */
-    text-align: center !important;       
-    padding: 10px !important;            
-    max-width: 100% !important;          
-    box-sizing: border-box !important;   
+  /* Блок Качество */
+  .power-quality-supplies .quality-block {
+    grid-column: 1; /* первый столбец */
   }
 
+  /* Блок Поставки */
+  .power-quality-supplies .supplies-block {
+    grid-column: 2; /* второй столбец */
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+    text-align: center !important;
+    padding: 10px !important;
+    max-width: 100% !important;
+    box-sizing: border-box !important;
   h1 { font-size: 1em; }
   h2 { font-size: 1em; }
   h3 { font-size: 0.9em; }
+  }
 
   nav a {
     margin: 5px 8px;
@@ -1140,7 +1141,7 @@ button,
 
 /* === Блок "Поставки" растягиваем на всю ширину вне зависимости от сетки === */
 .supplies-block,
-#supplies,
+#supplies,  
 footer .supplies {
   width: 100% !important;
   max-width: 100% !important;
