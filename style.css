@@ -1098,20 +1098,22 @@ button,
 }
 /* === Блок "Мощности / Контроль качества" в одну строку === */
 .power-quality-supplies {
-  display: grid !important;
-  grid-template-columns: repeat(2, 1fr) !important; /* 2 блока рядом */
-  gap: 15px !important;
-  align-items: stretch !important;
-}
+    display: flex !important;
+    justify-content: center !important;     /* центрируем по горизонтали */
+    align-items: stretch !important;        /* растягиваем по высоте */
+    gap: 15px !important;                   /* расстояние между ними */
+    flex-wrap: wrap !important;             /* чтобы адаптировалось при узком экране */
+    text-align: center !important;
+  }
 
-/* Для самих карточек внутри */
-.power-quality-supplies .power-block,
-.power-quality-supplies .quality-block {
-  width: 100% !important;
-  text-align: center !important;
-  padding: 10px !important;
-  box-sizing: border-box !important;
-}
+  .power-quality-supplies .power-block,
+  .power-quality-supplies .quality-block {
+    flex: 1 1 45% !important;               /* по 45% ширины — две колонки */
+    max-width: 45% !important;
+    text-align: center !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
+  }
 .whatsapp-button {
     font-size: 20px !important;         /* увеличиваем шрифт */
     padding: 14px 26px !important;      /* делаем кнопку шире и выше */
