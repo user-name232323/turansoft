@@ -1098,6 +1098,18 @@ button,
     grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
     gap: 10px;
   }
+  .power-quality-supplies .supplies-block,
+  .supplies-block,
+  #supplies,
+  footer .supplies {
+  white-space: normal !important;      /* разрешаем перенос слов */
+  word-wrap: break-word !important;    /* перенос длинных слов */
+  overflow-wrap: break-word !important; /* дополнительная страховка */
+  text-align: center !important;       /* центрируем текст */
+  padding: 10px !important;            /* немного отступов */
+  max-width: 100% !important;          /* не позволяем превышать ширину */
+  box-sizing: border-box !important;   /* учитываем padding в ширине */
+}
 
   /* Увеличиваем кнопку "Связаться с нами" */
   .cta,
