@@ -1097,6 +1097,11 @@ button,
     grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
     gap: 10px;
   }
+   .cta,
+  button {
+    font-size: 18px;
+    padding: 12px 20px;
+  }
 
   /* Блоки "Мощности / Качество / Поставки" */
   .power-quality-supplies {
