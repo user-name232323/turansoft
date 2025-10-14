@@ -984,49 +984,90 @@ footer {
   object-fit: cover;
 }
 
-/* 📱 Адаптивность */
+/* === Универсальная адаптация под мобильные === */
 @media (max-width: 992px) {
-  .achievements-grid {
+  /* Сетки: проекты, карточки, галерея, продукты */
+  .wrap,
+  .projects-grid,
+  .achievements-grid,
+  .products-grid,
+  .gallery,
+  .cards,
+  .grid-3 {
+    display: grid !important;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
-  }
-}
-
-@media (max-width: 600px) {
-  .achievements-grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px;
-  }
-}
-
-/* Эффект появления */
-@keyframes fadeUp {
-  to {
-    opacity: 1;
-    transform: translateY(0) scale(1);
-  }
-}
-
-  /* --- Контакты --- */
-  .contacts {
-    flex-direction: column !important;
     gap: 20px !important;
   }
 
-  .contact-info,
-  .contact-form {
-    min-width: 100% !important;
+  /* Все изображения масштабируем */
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* Проекты и карточки вертикально */
+  .project-card,
+  .ach-card,
+  .product-card,
+  .card {
+    flex-direction: column !important;
     width: 100% !important;
   }
 
-  /* --- Общие обертки --- */
-  .wrap {
-    padding: 10px !important;
+  /* Текст и overlay центрируем */
+  .project-text,
+  .overlay,
+  .about-text,
+  .geo-text,
+  .analysis-text {
+    text-align: center !important;
   }
 
-  /* --- Футер --- */
-  footer {
-    padding: 12px 10px !important;
+  /* Контакты и формы */
+  .contacts,
+  .contact-info,
+  .contact-form {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  /* Заголовки уменьшаем */
+  h1, h2, h3 {
+    font-size: 1.4em !important;
+  }
+
+  /* Отступы уменьшаем */
+  .wrap, .section, .hero, .products-section, #achievements, .gallery {
+    padding: 15px !important;
+  }
+
+  /* Кнопки и ссылки масштабируем */
+  button, .cta, .whatsapp-button {
     font-size: 14px !important;
+    padding: 10px 16px !important;
+  }
+}
+
+/* Мелкие мобильные устройства */
+@media (max-width: 600px) {
+  .wrap,
+  .projects-grid,
+  .achievements-grid,
+  .products-grid,
+  .gallery,
+  .cards,
+  .grid-3 {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
   }
 
+  h1 { font-size: 1.2em !important; }
+  h2 { font-size: 1.3em !important; }
+  h3 { font-size: 1.1em !important; }
+
+  nav a {
+    margin: 5px 8px !important;
+    display: inline-block !important;
+  }
+}
 }
