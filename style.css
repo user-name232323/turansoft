@@ -1087,21 +1087,66 @@ button,
 
 /* === Адаптация под мобильные === */
 @media (max-width: 600px) {
-   /* Галерея */
-  .gallery {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr) !important; /* 3 колонки */
-    gap: 6px !important; /* расстояние между изображениями */
-    justify-items: center !important;
-  }
+ /* === Галерея (2x3 как Продукция) === */
+.gallery {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* 3 в ряд */
+  gap: 15px !important; /* чуть больше отступ */
+  justify-items: center !important;
+  align-items: center !important;
+  margin-top: 20px !important;
+}
+.projects-grid {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* 3 карточки в ряд */
+  gap: 20px !important;
+  justify-items: center !important;
+  align-items: start !important;
+  margin-top: 20px !important;
+}
 
-  .gallery img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100px !important; /* ограничим ширину каждой картинки */
-    border-radius: 8px !important;
-    object-fit: cover !important;
-  }
+.project-card {
+  background: #fff !important;
+  border-radius: 12px !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+  overflow: hidden !important;
+  text-align: center !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+  width: 100% !important;
+  max-width: 300px !important;
+}
+
+.project-card img {
+  width: 100% !important;
+  height: 180px !important;
+  object-fit: cover !important;
+}
+
+.project-card:hover {
+  transform: scale(1.03) !important;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15) !important;
+}
+
+.project-text {
+  padding: 10px !important;
+  font-weight: 600 !important;
+  color: #333 !important;
+}
+
+.gallery img {
+  width: 100% !important;
+  max-width: 250px !important; /* как в продуктах */
+  height: 180px !important;
+  border-radius: 12px !important;
+  object-fit: cover !important;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
+  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
+}
+
+.gallery img:hover {
+  transform: scale(1.05) !important;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15) !important;
+}
    /* Продукция — сетка 2×3 */
   .products-grid {
     display: grid !important;
