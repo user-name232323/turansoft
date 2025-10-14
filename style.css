@@ -985,7 +985,8 @@ footer {
 }
 
 /* === Универсальная адаптация под мобильные === */
-/* Карточки, проекты, галерея */
+
+/* Сетки: проекты, карточки, галерея, продукты */
 .wrap,
 .projects-grid,
 .achievements-grid,
@@ -994,21 +995,18 @@ footer {
 .cards,
 .grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* минимальная ширина карточки */
-  gap: 15px;
-  justify-items: center; /* центрируем карточки по горизонтали */
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
 
-/* Карточки */
+/* Карточки и проекты */
 .project-card,
 .ach-card,
 .product-card,
 .card {
   width: 100%;
-  max-width: 180px; /* уменьшенные реальные размеры */
+  max-width: 220px;
   flex-direction: column;
-  display: flex;
-  align-items: center;
 }
 
 /* Изображения */
@@ -1033,8 +1031,8 @@ footer {
 .geo-text,
 .analysis-text {
   text-align: center;
-  font-size: 0.85rem;
-  padding: 4px;
+  font-size: 0.95rem;
+  padding: 5px;
 }
 
 /* Контакты и формы */
@@ -1064,7 +1062,7 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 12px;
   }
 
@@ -1082,7 +1080,7 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
+    grid-template-columns: repeat(2, 1fr); /* две колонки вместо одной */
     gap: 10px;
   }
 
@@ -1096,30 +1094,7 @@ button,
   }
 }
 
-/* === Очень маленькие экраны (до 400px) === */
-@media (max-width: 400px) {
-  .wrap,
-  .projects-grid,
-  .achievements-grid,
-  .products-grid,
-  .gallery,
-  .cards,
-  .grid-3 {
-    grid-template-columns: 1fr; /* 1 колонка на очень маленьких экранах */
-    gap: 8px;
-  }
-
-  h1 { font-size: 0.95em; }
-  h2 { font-size: 0.9em; }
-  h3 { font-size: 0.85em; }
-
-  button,
-  .cta,
-  .whatsapp-button {
-    font-size: 11px;
-    padding: 5px 8px;
-  }
-}
+/* === Блок "Поставки" растягиваем на всю ширину === */
 .supplies-block,
 #supplies,
 footer .supplies {
@@ -1133,6 +1108,26 @@ footer .supplies {
 .wrap .supplies-block,
 .projects-grid .supplies-block,
 .gallery .supplies-block {
-  grid-column: 1 / -1 !important;
+  grid-column: 1 / -1 !important; /* занимает всю ширину сетки */
+}
+
+/* === Дополнительно: мелкие улучшения === */
+@media (max-width: 400px) {
+  .wrap,
+  .projects-grid,
+  .achievements-grid,
+  .products-grid,
+  .gallery,
+  .cards,
+  .grid-3 {
+    grid-template-columns: 1fr; /* на очень узких экранах одна колонка */
+  }
+
+  button,
+  .cta,
+  .whatsapp-button {
+    font-size: 11px;
+    padding: 5px 8px;
+  }
 }
 }
