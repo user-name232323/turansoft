@@ -1097,21 +1097,18 @@ button,
   margin-top: 20px !important;
 }
 /* === Блок "Мощности / Контроль качества" в одну строку === */
-.power-quality-supplies {
-    display: flex !important;
-    justify-content: center !important;     /* центрируем по горизонтали */
-    align-items: stretch !important;        /* растягиваем по высоте */
-    gap: 15px !important;                   /* расстояние между ними */
-    flex-wrap: wrap !important;             /* чтобы адаптировалось при узком экране */
-    text-align: center !important;
+.about-company-content + .cards {
+    grid-template-columns: 1fr 1fr !important; /* тоже 2 блока на телефоне */
+    gap: 10px !important;
   }
-  .power-quality-supplies .power-block,
-  .power-quality-supplies .quality-block {
-    flex: 1 1 45% !important;               /* по 45% ширины — две колонки */
-    max-width: 45% !important;
-    text-align: center !important;
-    margin: 0 auto !important;
-    box-sizing: border-box !important;
+
+  .about-company-content + .cards .card {
+    padding: 10px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .about-company-content + .cards .small {
+    font-size: 0.8rem !important;
   }
 .whatsapp-button {
     font-size: 20px !important;         /* увеличиваем шрифт */
