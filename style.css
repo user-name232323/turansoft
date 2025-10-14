@@ -832,6 +832,97 @@ footer {
   font-size: 1rem;
   transition: background 0.3s ease, border-color 0.3s ease;
 }
+.section-title {
+  text-align: center;
+  margin-bottom: 50px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.section-title h2 {
+  font-size: 2.2rem;
+  color: #0f172a;
+  margin-bottom: 10px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.section-line {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, #1f5fbf, #2563eb);
+  margin: 0 auto 15px;
+  border-radius: 2px;
+}
+
+.section-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* Сетка проектов */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 30px;
+}
+
+.project-card {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.project-card img {
+  width: 50%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.project-text {
+  padding: 20px 25px;
+  font-size: 1.1rem;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+/* Анимация появления */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+  .project-card {
+    flex-direction: column;
+  }
+
+  .project-card img {
+    width: 100%;
+  }
+
+  .project-text {
+    text-align: center;
+  }
+}
 
 .product-card:hover .overlay {
   background: rgba(0, 0, 0, 0.65);
@@ -862,21 +953,24 @@ footer {
 }
 
 .achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: grid !important; /* 🔥 Принудительно включаем grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
   gap: 25px;
-  justify-content: center;
+  justify-items: center;
+  align-items: center;
   max-width: 1300px;
   margin: 0 auto;
 }
 
 .ach-card {
+  width: 100%;
+  max-width: 350px;
+  aspect-ratio: 16 / 10;
   overflow: hidden;
   border-radius: 16px;
+  background: #fff;
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  aspect-ratio: 16 / 10;
-  background: #fff;
 }
 
 .ach-card:hover {
@@ -888,23 +982,21 @@ footer {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  display: block;
 }
 
 /* 📱 Адаптивность */
 @media (max-width: 992px) {
   .achievements-grid {
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
   }
 }
 
 @media (max-width: 600px) {
   .achievements-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr) !important;
     gap: 15px;
   }
 }
-
 
 /* Эффект появления */
 @keyframes fadeUp {
