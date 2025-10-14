@@ -985,8 +985,85 @@ footer {
 }
 
 /* === Универсальная адаптация под мобильные === */
+
+/* === Универсальная адаптация и уменьшение всех блоков === */
+:root {
+  --scale: 0.5; /* уменьшение в 2 раза (0.33 = в 3 раза) */
+}
+
+/* Универсальное уменьшение текста и отступов */
+body, h1, h2, h3, h4, h5, h6, p, li, button, input {
+  transform: scale(var(--scale));
+  transform-origin: top left;
+}
+
+/* Универсальная сетка */
+.wrap,
+.projects-grid,
+.achievements-grid,
+.products-grid,
+.gallery,
+.cards,
+.grid-3 {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fit, minmax(calc(250px * var(--scale)), 1fr)) !important;
+  gap: calc(20px * var(--scale)) !important;
+}
+
+/* Карточки */
+.project-card,
+.ach-card,
+.product-card,
+.card {
+  width: 100% !important;
+  max-width: calc(350px * var(--scale)) !important;
+  flex-direction: column !important;
+}
+
+/* Изображения */
+.project-card img,
+.ach-card img,
+.product-card img,
+.gallery img,
+.card img,
+.about-image img,
+.geo-image img,
+.analysis-image img {
+  width: 100% !important;
+  height: auto !important;
+  object-fit: cover;
+  border-radius: calc(12px * var(--scale));
+}
+
+/* Текст */
+.project-text,
+.overlay,
+.about-text,
+.geo-text,
+.analysis-text {
+  text-align: center !important;
+  font-size: calc(1rem * var(--scale)) !important;
+  padding: calc(10px * var(--scale)) !important;
+}
+
+/* Контакты и формы */
+.contacts,
+.contact-info,
+.contact-form {
+  flex-direction: column !important;
+  width: 100% !important;
+  padding: calc(10px * var(--scale)) !important;
+}
+
+/* Кнопки */
+button, .cta, .whatsapp-button {
+  font-size: calc(14px * var(--scale)) !important;
+  padding: calc(8px * var(--scale)) calc(12px * var(--scale)) !important;
+  border-radius: calc(8px * var(--scale)) !important;
+}
+
+/* === Адаптация под планшеты === */
 @media (max-width: 992px) {
-  /* Сетки: проекты, карточки, галерея, продукты */
   .wrap,
   .projects-grid,
   .achievements-grid,
@@ -994,61 +1071,16 @@ footer {
   .gallery,
   .cards,
   .grid-3 {
-    display: grid !important;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)) !important;
-    gap: 20px !important;
+    grid-template-columns: repeat(auto-fit, minmax(calc(180px * var(--scale)), 1fr)) !important;
+    gap: calc(12px * var(--scale)) !important;
   }
 
-  /* Все изображения масштабируем */
-  img {
-    max-width: 100% !important;
-    height: auto !important;
-  }
-
-  /* Проекты и карточки вертикально */
-  .project-card,
-  .ach-card,
-  .product-card,
-  .card {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  /* Текст и overlay центрируем */
-  .project-text,
-  .overlay,
-  .about-text,
-  .geo-text,
-  .analysis-text {
-    text-align: center !important;
-  }
-
-  /* Контакты и формы */
-  .contacts,
-  .contact-info,
-  .contact-form {
-    flex-direction: column !important;
-    width: 100% !important;
-  }
-
-  /* Заголовки уменьшаем */
-  h1, h2, h3 {
-    font-size: 1.4em !important;
-  }
-
-  /* Отступы уменьшаем */
-  .wrap, .section, .hero, .products-section, #achievements, .gallery {
-    padding: 15px !important;
-  }
-
-  /* Кнопки и ссылки масштабируем */
-  button, .cta, .whatsapp-button {
-    font-size: 14px !important;
-    padding: 10px 16px !important;
-  }
+  h1 { font-size: calc(1.2em * var(--scale)) !important; }
+  h2 { font-size: calc(1.1em * var(--scale)) !important; }
+  h3 { font-size: calc(1em * var(--scale)) !important; }
 }
 
-/* Мелкие мобильные устройства */
+/* === Адаптация под мобильные === */
 @media (max-width: 600px) {
   .wrap,
   .projects-grid,
@@ -1058,16 +1090,18 @@ footer {
   .cards,
   .grid-3 {
     grid-template-columns: 1fr !important;
-    gap: 12px !important;
+    gap: calc(10px * var(--scale)) !important;
   }
 
-  h1 { font-size: 1.2em !important; }
-  h2 { font-size: 1.3em !important; }
-  h3 { font-size: 1.1em !important; }
+  h1 { font-size: calc(1em * var(--scale)) !important; }
+  h2 { font-size: calc(1em * var(--scale)) !important; }
+  h3 { font-size: calc(0.9em * var(--scale)) !important; }
 
   nav a {
-    margin: 5px 8px !important;
+    margin: calc(5px * var(--scale)) calc(8px * var(--scale)) !important;
     display: inline-block !important;
   }
 }
+
+
 }
