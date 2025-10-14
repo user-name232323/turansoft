@@ -1120,4 +1120,19 @@ button,
     padding: 5px 8px;
   }
 }
+.supplies-block,
+#supplies,
+footer .supplies {
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 auto;
+  display: block !important;
+  text-align: center;
+}
+
+.wrap .supplies-block,
+.projects-grid .supplies-block,
+.gallery .supplies-block {
+  grid-column: 1 / -1 !important;
+}
 }
