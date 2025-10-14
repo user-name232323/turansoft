@@ -985,6 +985,7 @@ footer {
 }
 
 /* === Универсальная адаптация под мобильные === */
+/* === Универсальная адаптация и уменьшение блоков === */
 
 /* Сетки: проекты, карточки, галерея, продукты */
 .wrap,
@@ -1053,6 +1054,13 @@ button,
   border-radius: 6px;
 }
 
+/* === Блок "Мощности / Качество / Поставки" === */
+.power-quality-supplies {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 блока в ряд по умолчанию */
+  gap: 15px;
+}
+
 /* === Адаптация под планшеты === */
 @media (max-width: 992px) {
   .wrap,
@@ -1066,6 +1074,10 @@ button,
     gap: 12px;
   }
 
+  .power-quality-supplies {
+    grid-template-columns: repeat(2, 1fr); /* 2 блока в ряд */
+  }
+
   h1 { font-size: 1.2em; }
   h2 { font-size: 1.1em; }
   h3 { font-size: 1em; }
@@ -1073,6 +1085,7 @@ button,
 
 /* === Адаптация под мобильные === */
 @media (max-width: 600px) {
+  /* Сетки карточек и галерей */
   .wrap,
   .projects-grid,
   .achievements-grid,
@@ -1080,8 +1093,19 @@ button,
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(2, 1fr); /* две колонки вместо одной */
+    grid-template-columns: repeat(2, 1fr); /* 2 колонки вместо одной */
     gap: 10px;
+  }
+
+  /* Блоки "Мощности / Качество / Поставки" */
+  .power-quality-supplies {
+    grid-template-columns: 1fr 1fr; /* 2 блока в ряд */
+    grid-auto-rows: auto;
+  }
+
+  /* Третий блок (Поставки) переносим на новую строку */
+  .power-quality-supplies .supplies-block {
+    grid-column: 1 / -1; /* занимает всю ширину */
   }
 
   h1 { font-size: 1em; }
@@ -1094,7 +1118,7 @@ button,
   }
 }
 
-/* === Блок "Поставки" растягиваем на всю ширину === */
+/* === Блок "Поставки" растягиваем на всю ширину вне зависимости от сетки === */
 .supplies-block,
 #supplies,
 footer .supplies {
@@ -1111,7 +1135,7 @@ footer .supplies {
   grid-column: 1 / -1 !important; /* занимает всю ширину сетки */
 }
 
-/* === Дополнительно: мелкие улучшения === */
+/* === Улучшения для очень узких экранов === */
 @media (max-width: 400px) {
   .wrap,
   .projects-grid,
@@ -1130,4 +1154,6 @@ footer .supplies {
     padding: 5px 8px;
   }
 }
+
+
 }
