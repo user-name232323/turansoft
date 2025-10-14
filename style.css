@@ -1087,7 +1087,7 @@ button,
 
 /* === Адаптация под мобильные === */
 @media (max-width: 600px) {
-  /* Сетки карточек и галерей */
+   /* Сетки карточек и галерей */
   .wrap,
   .projects-grid,
   .achievements-grid,
@@ -1098,18 +1098,6 @@ button,
     grid-template-columns: repeat(2, 1fr); /* 2 колонки на телефоне */
     gap: 10px;
   }
-  .power-quality-supplies .supplies-block,
-  .supplies-block,
-  #supplies,
-  footer .supplies {
-  white-space: normal !important;      /* разрешаем перенос слов */
-  word-wrap: break-word !important;    /* перенос длинных слов */
-  overflow-wrap: break-word !important; /* дополнительная страховка */
-  text-align: center !important;       /* центрируем текст */
-  padding: 10px !important;            /* немного отступов */
-  max-width: 100% !important;          /* не позволяем превышать ширину */
-  box-sizing: border-box !important;   /* учитываем padding в ширине */
-}
 
   /* Увеличиваем кнопку "Связаться с нами" */
   .cta,
@@ -1120,19 +1108,24 @@ button,
 
   /* Блоки "Мощности / Качество / Поставки" */
   .power-quality-supplies {
-    grid-template-columns: 1fr 1fr; /* 2 блока в ряд */
+    grid-template-columns: 1fr 1fr !important; /* 2 блока в ряд */
     grid-auto-rows: auto !important;
     gap: 10px !important;
   }
 
   /* Третий блок (Поставки) переносим на новую строку */
-  .power-quality-supplies .supplies-block {
+  .power-quality-supplies .supplies-block,
+  .supplies-block,
+  #supplies,
+  footer .supplies {
     grid-column: 1 / -1 !important; /* занимает всю ширину */
-    padding: 12px !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-    white-space: normal !important;
-    text-align: center !important;
+    white-space: normal !important;      /* разрешаем перенос слов */
+    word-wrap: break-word !important;    /* перенос длинных слов */
+    overflow-wrap: break-word !important; /* дополнительная страховка */
+    text-align: center !important;       
+    padding: 10px !important;            
+    max-width: 100% !important;          
+    box-sizing: border-box !important;   
   }
 
   h1 { font-size: 1em; }
@@ -1153,9 +1146,15 @@ footer .supplies {
   max-width: 100% !important;
   margin: 0 auto;
   display: block !important;
-  text-align: center !important;
+  text-align: center;
 }
 
+.wrap .supplies-block,
+.projects-grid .supplies-block,
+.gallery .supplies-block {
+  grid-column: 1 / -1 !important; 
+
+}
 /* === Улучшения для очень узких экранов === */
 @media (max-width: 400px) {
   .wrap,
