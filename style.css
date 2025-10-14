@@ -1096,31 +1096,26 @@ button,
   align-items: center !important;
   margin-top: 20px !important;
 }
-.projects-grid {
-  display: grid !important;
-  grid-template-columns: repeat(3, 1fr) !important; /* 3 карточки в ряд */
-  gap: 20px !important;
-  justify-items: center !important;
-  align-items: start !important;
-  margin-top: 20px !important;
-}
+ .projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 карточки в ряд */
+    gap: 10px !important; /* отступ между ними */
+    justify-items: center !important;
+  }
 
-.project-card {
-  background: #fff !important;
-  border-radius: 12px !important;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1) !important;
-  overflow: hidden !important;
-  text-align: center !important;
-  transition: transform 0.3s ease, box-shadow 0.3s ease !important;
-  width: 100% !important;
-  max-width: 300px !important;
-}
+  .projects-grid img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 160px !important; /* немного уменьшено под экран */
+    border-radius: 8px !important;
+    object-fit: cover !important;
+  }
 
-.project-card img {
-  width: 100% !important;
-  height: 180px !important;
-  object-fit: cover !important;
-}
+  .projects-grid .project-card {
+    text-align: center !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
 
 .project-card:hover {
   transform: scale(1.03) !important;
