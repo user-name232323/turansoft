@@ -985,19 +985,9 @@ footer {
 }
 
 /* === Универсальная адаптация под мобильные === */
+/* === Универсальная адаптация с горизонтальной компоновкой === */
 
-/* === Универсальная адаптация и уменьшение всех блоков === */
-:root {
-  --scale: 0.5; /* уменьшение в 2 раза (0.33 = в 3 раза) */
-}
-
-/* Универсальное уменьшение текста и отступов */
-body, h1, h2, h3, h4, h5, h6, p, li, button, input {
-  transform: scale(var(--scale));
-  transform-origin: top left;
-}
-
-/* Универсальная сетка */
+/* Сетки: проекты, карточки, галерея, продукты */
 .wrap,
 .projects-grid,
 .achievements-grid,
@@ -1005,9 +995,9 @@ body, h1, h2, h3, h4, h5, h6, p, li, button, input {
 .gallery,
 .cards,
 .grid-3 {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(calc(250px * var(--scale)), 1fr)) !important;
-  gap: calc(20px * var(--scale)) !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); /* минимальная ширина блока 140px, максимум 1fr */
+  gap: 10px;
 }
 
 /* Карточки */
@@ -1015,9 +1005,10 @@ body, h1, h2, h3, h4, h5, h6, p, li, button, input {
 .ach-card,
 .product-card,
 .card {
-  width: 100% !important;
-  max-width: calc(350px * var(--scale)) !important;
-  flex-direction: column !important;
+  width: 100%;
+  max-width: 200px; /* уменьшаем реальные размеры */
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 /* Изображения */
@@ -1029,10 +1020,10 @@ body, h1, h2, h3, h4, h5, h6, p, li, button, input {
 .about-image img,
 .geo-image img,
 .analysis-image img {
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   object-fit: cover;
-  border-radius: calc(12px * var(--scale));
+  border-radius: 6px;
 }
 
 /* Текст */
@@ -1041,25 +1032,27 @@ body, h1, h2, h3, h4, h5, h6, p, li, button, input {
 .about-text,
 .geo-text,
 .analysis-text {
-  text-align: center !important;
-  font-size: calc(1rem * var(--scale)) !important;
-  padding: calc(10px * var(--scale)) !important;
+  text-align: center;
+  font-size: 0.85rem;
+  padding: 4px;
 }
 
 /* Контакты и формы */
 .contacts,
 .contact-info,
 .contact-form {
-  flex-direction: column !important;
-  width: 100% !important;
-  padding: calc(10px * var(--scale)) !important;
+  flex-direction: column;
+  width: 100%;
+  padding: 4px;
 }
 
 /* Кнопки */
-button, .cta, .whatsapp-button {
-  font-size: calc(14px * var(--scale)) !important;
-  padding: calc(8px * var(--scale)) calc(12px * var(--scale)) !important;
-  border-radius: calc(8px * var(--scale)) !important;
+button,
+.cta,
+.whatsapp-button {
+  font-size: 12px;
+  padding: 5px 8px;
+  border-radius: 5px;
 }
 
 /* === Адаптация под планшеты === */
@@ -1071,16 +1064,16 @@ button, .cta, .whatsapp-button {
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: repeat(auto-fit, minmax(calc(180px * var(--scale)), 1fr)) !important;
-    gap: calc(12px * var(--scale)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 8px;
   }
 
-  h1 { font-size: calc(1.2em * var(--scale)) !important; }
-  h2 { font-size: calc(1.1em * var(--scale)) !important; }
-  h3 { font-size: calc(1em * var(--scale)) !important; }
+  h1 { font-size: 1.2em; }
+  h2 { font-size: 1.1em; }
+  h3 { font-size: 1em; }
 }
 
-/* === Адаптация под мобильные === */
+/* === Адаптация под мобильные устройства === */
 @media (max-width: 600px) {
   .wrap,
   .projects-grid,
@@ -1089,19 +1082,20 @@ button, .cta, .whatsapp-button {
   .gallery,
   .cards,
   .grid-3 {
-    grid-template-columns: 1fr !important;
-    gap: calc(10px * var(--scale)) !important;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* минимум 120px — позволяет хотя бы 2 колонки при ширине ~250px */
+    gap: 6px;
   }
 
-  h1 { font-size: calc(1em * var(--scale)) !important; }
-  h2 { font-size: calc(1em * var(--scale)) !important; }
-  h3 { font-size: calc(0.9em * var(--scale)) !important; }
+  h1 { font-size: 1em; }
+  h2 { font-size: 1em; }
+  h3 { font-size: 0.9em; }
 
   nav a {
-    margin: calc(5px * var(--scale)) calc(8px * var(--scale)) !important;
-    display: inline-block !important;
+    margin: 4px 6px;
+    display: inline-block;
   }
 }
+
 
 
 }
