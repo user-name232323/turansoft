@@ -158,23 +158,106 @@
 </section>
 
 
+<!-- Продукция -->
+<section id="products" class="section products-section">
+  <div class="wrap">
+    <h2>Продукция</h2>
+    <div class="products-grid">
 
-    <!-- Продукция -->
-    <section id="products" class="section products-section">
-      <div class="wrap">
-        <h2>Продукция</h2>
-        <div class="products-banner">
-          <div class="products-list">
-            <div class="product-item">Щебень из плотных горных пород — ГОСТ 8267-93</div>
-            <div class="product-item">Щебень для балластного слоя железнодорожного пути — ГОСТ 7392-2002</div>
-            <div class="product-item">Смеси щебёночно-песчаные — ГОСТ 25607-94</div>
-            <div class="product-item">Песок строительный — ГОСТ 8736-93</div>
-            <div class="product-item">Бетонные и железобетонные изделия</div>
-          </div>
-        </div>
+      <div class="product-card" style="background-image: url('pag1.jpg')">
+        <div class="overlay">Щебень фракции 5x20 (мытый)</div>
       </div>
-    </section>
+      <div class="product-card" style="background-image: url('pag2.webp')">
+        <div class="overlay">Щебень фракции 5x20 (сухой)</div>
+      </div>
+      <div class="product-card" style="background-image: url('pag3.jpg')">
+        <div class="overlay">Щебень фракции 20x40</div>
+      </div>
+      <div class="product-card" style="background-image: url('pag4.jpg')">
+        <div class="overlay">Щебень фракции 25x60</div>
+      </div>
+      <div class="product-card" style="background-image: url('pag5.jpg')">
+        <div class="overlay">Щебень фракции 40x70</div>
+      </div>
+      <div class="product-card" style="background-image: url('pag6.jpg')">
+        <div class="overlay">Щебень фракции 70x150</div>
+      </div>
+    </div>
+  </div>
+</section>
 
+<style>
+.products-section {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  padding: 50px 0;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-size: 2.5rem;
+  color: #fbbf24;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  animation: glowText 3s ease-in-out infinite alternate;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  height: 250px;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0,0,0,0.4);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* скрываем карточки без картинки */
+.product-card[style*="url('')"],
+.product-card[style*="url()"] {
+  display: none !important;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.6);
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0,0,0,0.6);
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-shadow: 0 0 8px #000;
+  backdrop-filter: blur(4px);
+  animation: rainbowText 5s linear infinite;
+}
+
+@keyframes rainbowText {
+  0% { color: #ff0080; }
+  25% { color: #ffbf00; }
+  50% { color: #00ff9d; }
+  75% { color: #00b3ff; }
+  100% { color: #ff00ff; }
+}
+
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #fbbf24, 0 0 10px #facc15; }
+  to { text-shadow: 0 0 15px #fbbf24, 0 0 30px #fde68a; }
+}
+</style>
+
+</style>
     <section id="advantages" class="section">
       <div class="wrap">
         <h2>Технологические преимущества</h2>

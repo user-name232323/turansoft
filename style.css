@@ -694,20 +694,167 @@ footer {
 }
 
 /* ==== АДАПТИВ ==== */
-@media (max-width: 900px) {
-  .contacts {
-    flex-direction: column;
+/* ==== Мобильные стили (до 600px) ==== */
+@media (max-width: 600px) {
+
+  /* --- Логотип --- */
+  .logo {
+    width: 80px !important; /* Увеличим немного для читаемости */
+    height: auto !important;
+    margin: 0 auto; /* Центрируем */
+    display: block;
+  }
+
+  .logo img.logo-img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* --- Хедер --- */
+  header {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 12px;
+  }
+
+  nav {
+    width: 100%;
+    text-align: center;
+  }
+
+  nav a {
+    display: inline-block;
+    margin: 0 10px 10px;
+    font-size: 16px;
+  }
+
+  /* --- Герой --- */
+  .hero {
+    padding: 20px 10px !important;
+    text-align: center !important;
+  }
+
+  .hero h1 {
+    font-size: 24px !important;
+  }
+
+  .hero p {
+    font-size: 16px !important;
+    padding: 0 10px;
+  }
+
+  /* --- Галерея --- */
+  .gallery {
+    grid-template-columns: 1fr !important; /* Одна колонка */
+    gap: 10px !important;
+  }
+
+  .gallery img {
+    width: 100% !important;
+    height: auto !important;
+    border-radius: 8px;
+  }
+
+
+
+.products-section {
+  background: #f8f9fa;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.products-section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  color: #222;
+  font-weight: 700;
+  position: relative;
+}
+
+.products-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: #1f5fbf;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.product-card {
+  position: relative;
+  height: 220px;
+  border-radius: 15px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.6);
+}
+
+@media (max-width: 768px) {
+  .product-card {
+    height: 180px;
+  }
+  .products-section h2 {
+    font-size: 1.6rem;
   }
 }
 
-@media (max-width: 600px) {
-  .hero h1 {
-    font-size: 24px;
+
+@media (max-width: 480px) {
+  .products-grid {
+    gap: 14px;
   }
-  .gallery img {
-    height: 180px;
+  .product-item {
+    font-size: 0.9rem;
+    border-radius: 12px;
   }
-  .products-section {
-    padding: 20px;
+}
+
+ 
+
+/* Эффект появления */
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
   }
+}
+
+  /* --- Контакты --- */
+  .contacts {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+
+  .contact-info,
+  .contact-form {
+    min-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* --- Общие обертки --- */
+  .wrap {
+    padding: 10px !important;
+  }
+
+  /* --- Футер --- */
+  footer {
+    padding: 12px 10px !important;
+    font-size: 14px !important;
+  }
+
 }
