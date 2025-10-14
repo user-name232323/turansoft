@@ -1102,6 +1102,27 @@ button,
     border-radius: 8px !important;
     object-fit: cover !important;
   }
+   /* Продукция — сетка 2×3 */
+  .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 колонки */
+    gap: 10px !important; /* отступы между карточками */
+    justify-items: center !important;
+  }
+
+  .products-grid img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 140px !important; /* уменьшенные изображения */
+    border-radius: 8px !important;
+    object-fit: cover !important;
+  }
+
+  .products-grid .product-card {
+    text-align: center !important;
+    padding: 8px !important;
+    box-sizing: border-box !important;
+  }
  
   /* Увеличиваем кнопку "Связаться с нами" */
   .cta,
