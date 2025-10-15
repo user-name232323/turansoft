@@ -397,6 +397,25 @@ nav a:hover {
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
 }
 
+/* ==== АВТОПРОКРУТКА ==== */
+.auto-scroll-gallery {
+  overflow-x: auto;
+  white-space: nowrap;
+  display: flex;
+  gap: 14px;
+  scroll-behavior: smooth;
+}
+
+.auto-scroll-gallery img {
+  flex: 0 0 auto;
+  width: 280px;
+  height: 200px;
+}
+
+.auto-scroll-gallery::-webkit-scrollbar {
+  display: none;
+}
+
 /* ==== КАРТОЧКИ ==== */
 .grid-3 {
   display: grid;
