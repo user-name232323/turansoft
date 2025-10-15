@@ -757,10 +757,8 @@ footer {
   }
 
 .card {
-    min-height: auto !important;
-    height: auto !important;
-    overflow: visible !important;
-    padding: 16px 12px !important;
+  padding-bottom: 20px; /* отодвигает текст от нижней границы */
+  border-bottom: 3px solid #1f5fbf; /* сама линия остаётся как была */
   }
 
   .card p {
@@ -768,6 +766,9 @@ footer {
     line-height: 1.4 !important;
     white-space: normal !important;
   }
+  .card p:last-child {
+  margin-bottom: 20px;
+ }
 
   /* --- Хедер --- */
   header {
