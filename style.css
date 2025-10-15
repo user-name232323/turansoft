@@ -743,7 +743,6 @@ footer {
 /* ==== АДАПТИВ ==== */
 /* ==== Мобильные стили (до 600px) ==== */
 @media (max-width: 600px) {
-
   /* --- Логотип --- */
   .logo {
     width: 80px !important; /* Увеличим немного для читаемости */
@@ -763,6 +762,7 @@ footer {
     align-items: center !important;
     gap: 12px;
   }
+
 
   nav {
     width: 100%;
@@ -960,6 +960,18 @@ footer {
 @media (max-width: 768px) {
   .project-card {
     flex-direction: column;
+  }
+   .card {
+    min-height: auto;
+    height: auto; /* карточка сама растягивается по тексту */
+    overflow: visible;
+    padding: 16px 12px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.4; /* текст компактнее и лучше помещается */
+    white-space: normal; /* разрешает перенос строк */
   }
 
   .project-card img {
