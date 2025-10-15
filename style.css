@@ -757,7 +757,7 @@ footer {
   }
 
 .card {
-  padding-bottom: 20px; /* отодвигает текст от нижней границы */
+  padding-bottom: 30px; /* отодвигает текст от нижней границы */
   border-bottom: 3px solid #1f5fbf; /* сама линия остаётся как была */
   }
 
@@ -767,7 +767,7 @@ footer {
     white-space: normal !important;
   }
   .card p:last-child {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
  }
 
   /* --- Хедер --- */
