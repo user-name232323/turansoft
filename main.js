@@ -1,8 +1,4 @@
-console.log('✅ main.js загружен');
-
-window.addEventListener('load', () => {
-  console.log('🌐 Страница полностью загружена — инициализация скриптов');
-
+document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('contactForm');
   const status = document.getElementById('formStatus');
   const submitBtn = form?.querySelector('button[type="submit"]');
@@ -85,28 +81,17 @@ window.addEventListener('load', () => {
 
   // === АВТОПРОКРУТКА ГАЛЕРЕИ ===
   const gallery = document.getElementById('autoGallery');
-  console.log('🎞️ Галерея найдена:', !!gallery);
-
   if (gallery) {
     let scrollAmount = 0;
-    const scrollStep = 1;  // Скорость
-    const tickMs = 30;     // Интервал (чем меньше, тем быстрее)
-
     function autoScroll() {
       if (!gallery.matches(':hover')) {
-        scrollAmount += scrollStep;
+        scrollAmount += 1;
         gallery.scrollLeft = scrollAmount;
         if (scrollAmount >= gallery.scrollWidth - gallery.clientWidth) {
           scrollAmount = 0;
         }
       }
     }
-
-    const timer = setInterval(autoScroll, tickMs);
-
-    // Остановка при закрытии/уходе со страницы
-    window.addEventListener('beforeunload', () => clearInterval(timer));
-  } else {
-    console.warn('⚠️ Элемент #autoGallery не найден. Проверь ID в HTML.');
+    setInterval(autoScroll, 30);
   }
 });

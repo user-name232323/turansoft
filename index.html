@@ -413,23 +413,65 @@
     </section>
 
     <!-- Галерея -->
-<section id="gallery" class="section">
-  <div class="wrap">
-    <h2>Галерея</h2>
-    <div id="autoGallery" class="gallery auto-scroll-gallery">
-      <img src="image1.png" alt="Производственный цех">
-      <img src="image2.png" alt="Оборудование на стройке">
-      <img src="image3.png" alt="Щебень">
-      <img src="image4.png" alt="Строительная техника1">
-      <img src="image5.png" alt="Производственный цех1">
-      <img src="image6.png" alt="Оборудование на стройке1">
-      <img src="image7.png" alt="Щебень">
-      <img src="image8.png" alt="Производственный цех">
-      <img src="image9.png" alt="Оборудование на стройке">
-      <img src="image10.png" alt="Щебень">
+<section id="gallery" class="section" style="padding: 60px 0; background: #f9fafb;">
+  <div class="wrap" style="max-width: 1100px; margin: 0 auto; text-align: center;">
+    <h2 style="margin-bottom: 25px; font-size: 28px;">Галерея</h2>
+
+    <div id="autoGallery" 
+         style="display: flex; gap: 14px; overflow-x: auto; scroll-behavior: smooth; white-space: nowrap;">
+      <img src="image1.png" alt="Производственный цех" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image2.png" alt="Оборудование на стройке" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image3.png" alt="Щебень" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image4.png" alt="Строительная техника" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image5.png" alt="Производственный цех 2" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image6.png" alt="Щебень 2" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image7.png" alt="Техника 2" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image8.png" alt="Цех 3" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image9.png" alt="Оборудование 3" style="width:280px; height:200px; flex:0 0 auto;">
+      <img src="image10.png" alt="Щебень 3" style="width:280px; height:200px; flex:0 0 auto;">
     </div>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const gallery = document.getElementById('autoGallery');
+      if (!gallery) return;
+
+      let scrollAmount = 0;
+      function autoScroll() {
+        if (!gallery.matches(':hover')) {
+          scrollAmount += 1;
+          gallery.scrollLeft = scrollAmount;
+          if (scrollAmount >= gallery.scrollWidth - gallery.clientWidth) {
+            scrollAmount = 0;
+          }
+        }
+      }
+      setInterval(autoScroll, 30);
+    });
+  </script>
 </section>
+
+<style>
+  /* Скрываем полосу прокрутки */
+  #autoGallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  #autoGallery {
+    scrollbar-width: none;
+  }
+
+  /* Небольшая анимация при наведении */
+  #autoGallery img {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+  }
+
+  #autoGallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
     <!-- Наши партнёры -->
 <section id="partners" class="section">
   <div class="wrap">
