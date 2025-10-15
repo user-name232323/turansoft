@@ -756,6 +756,19 @@ footer {
     height: auto;
   }
 
+  .card {
+    min-height: auto;
+    height: auto; /* карточка сама растягивается по тексту */
+    overflow: visible;
+    padding: 16px 12px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 1.4; /* текст компактнее и лучше помещается */
+    white-space: normal; /* разрешает перенос строк */
+  }
+
   /* --- Хедер --- */
   header {
     flex-direction: column !important;
