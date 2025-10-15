@@ -544,6 +544,34 @@ nav a:hover {
   margin-top: 10px;
   color: #555;
 }
+.styled-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #ffffff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.styled-table th {
+  background-color: var(--accent);
+  color: #fff;
+  text-align: left;
+  font-size: 18px;
+  padding: 15px;
+}
+
+.styled-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+  color: #0f1724;
+}
+
+.styled-table tr:last-child td {
+  border-bottom: none;
+}
 
 /* ==== Достижения и проекты ==== */
 #achievements {
@@ -1178,6 +1206,30 @@ button,
     border-radius: 8px !important;
     object-fit: cover !important;
   }
+  .product-table table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.product-table th {
+  text-align: left;
+  background-color: var(--accent);
+  color: #fff;
+  font-size: 18px;
+  padding: 15px;
+}
+
+.product-table td {
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+  text-align: left;
+  color: #0f1724;
+}
 
   .products-grid .product-card {
     text-align: center !important;
