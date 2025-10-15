@@ -928,6 +928,9 @@ footer {
   grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 30px;
 }
+.cards-grid {
+    height: auto !important;
+  }
 
 .project-card {
   display: flex;
@@ -974,19 +977,6 @@ footer {
   .project-card {
     flex-direction: column;
   }
-   .card {
-    min-height: auto;
-    height: auto; /* карточка сама растягивается по тексту */
-    overflow: visible;
-    padding: 16px 12px;
-  }
-
-  .card p {
-    font-size: 14px;
-    line-height: 1.4; /* текст компактнее и лучше помещается */
-    white-space: normal; /* разрешает перенос строк */
-  }
-
   .project-card img {
     width: 100%;
   }
