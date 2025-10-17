@@ -789,7 +789,7 @@ footer {
 
 /* ==== АДАПТИВ ==== */
 /* ==== Мобильные стили (до 600px) ==== */
-@media (max-width: 768px) {
+@media (max-width: 600px) {
   /* --- Логотип --- */
   .logo {
     width: 80px !important; /* Увеличим немного для читаемости */
@@ -798,7 +798,7 @@ footer {
     display: block;
   }
     .lang-switcher {
-    padding-right: 20px !important; /* увеличиваем отступ справа */
+    padding-right: 5px !important; /* увеличиваем отступ справа */
     /* или можно margin-right: 20px !important; если контейнер фиксирован */
   }
 
