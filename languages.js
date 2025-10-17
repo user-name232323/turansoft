@@ -111,7 +111,12 @@ const translations = {
     "contacts.emailInput": "Email",
     "contacts.message": "Сообщение",
     "contacts.sendButton": "Отправить",
-    "contacts.whatsappButton": "Написать в WhatsApp"  
+    "contacts.whatsappButton": "Написать в WhatsApp",
+    "contacts.name": "Имя",
+    "contacts.phone": "Телефон",
+    "contacts.emailInput": "Email",
+    "contacts.message": "Сообщение",
+    "contacts.sendButton": "Отправить"
   },
 
   kk: {
@@ -240,7 +245,12 @@ const translations = {
     "contacts.emailInput": "Email",
     "contacts.message": "Хабарлама",
     "contacts.sendButton": "Жіберу",
-    "contacts.whatsappButton": "WhatsApp-та жазу"
+    "contacts.whatsappButton": "WhatsApp-та жазу",
+    "contacts.name": "Аты-жөні",
+    "contacts.phone": "Телефон",
+    "contacts.emailInput": "Email",
+    "contacts.message": "Хабарлама",
+    "contacts.sendButton": "Жіберу"
   },
   en: {
     "section.geographyTitle": "Geography of Production",
@@ -365,7 +375,12 @@ const translations = {
     "contacts.emailInput": "Email",
     "contacts.message": "Message",
     "contacts.sendButton": "Send",
-    "contacts.whatsappButton": "Write in WhatsApp"
+    "contacts.whatsappButton": "Write in WhatsApp",
+    "contacts.name": "Name",
+    "contacts.phone": "Phone",
+    "contacts.emailInput": "Email",
+    "contacts.message": "Message",
+    "contacts.sendButton": "Send"
   }
 };
 

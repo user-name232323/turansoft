@@ -168,6 +168,37 @@ if (videos.length) {
       videoModal.style.display = 'none';
     }
   });
+  // === ПЕРЕКЛЮЧЕНИЕ ЯЗЫКА ===
+const langButtons = document.querySelectorAll(".lang-switcher button");
+
+function setLanguage(lang) {
+  const elements = document.querySelectorAll("[data-i18n], [data-i18n-placeholder]");
+  
+  elements.forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    if (key && translations[lang] && translations[lang][key]) {
+      el.innerHTML = translations[lang][key]; // текст кнопок, заголовков и т.д.
+    }
+
+    const phKey = el.getAttribute("data-i18n-placeholder");
+    if (phKey && translations[lang] && translations[lang][phKey]) {
+      el.placeholder = translations[lang][phKey]; // placeholder полей формы
+    }
+  });
+
+  localStorage.setItem("lang", lang);
+}
+
+// Загрузка выбранного языка из localStorage
+const savedLang = localStorage.getItem("lang") || "ru";
+setLanguage(savedLang);
+
+langButtons.forEach(btn => {
+  btn.addEventListener("click", () => {
+    const lang = btn.getAttribute("data-lang");
+    setLanguage(lang);
+  });
+});
 }
 }
 });
