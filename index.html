@@ -16,50 +16,61 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <body>
+
+  <div class="lang-switcher" style="text-align:right; padding:10px;">
+    <button data-lang="ru">🇷🇺 RU</button>
+    <button data-lang="kk">🇰🇿 KZ</button>
+    <button data-lang="en">🇬🇧 EN</button>
+  </div>
+
   <div class="wrap">
 <header>
-  <div class="lang-switcher">
-  <button data-lang="ru">🇷🇺 RU</button>
-  <button data-lang="kk">🇰🇿 KZ</button>
-  <button data-lang="en">🇬🇧 EN</button>
-</div>
   <div class="wrap brand">
     <div class="logo">
       <img src="image23.png" alt="Логотип" class="logo-img">
     </div>
-    <nav>
-      <a href="#services">О предприятии</a>
-      <a href="#geography">География добычи</a>
-      <a href="#products">Продукция</a>
-      <a href="#projects">Достижения и Ключевые проекты</a>
-      <a href="#contacts">Контакты</a>
-    </nav>
+
+   <nav>
+    <a href="#services" data-i18n="nav.about">О предприятии</a>
+    <a href="#geography" data-i18n="nav.geography">География добычи</a>
+    <a href="#products" data-i18n="nav.products">Продукция</a>
+    <a href="#projects" data-i18n="nav.projects">Достижения и Ключевые проекты</a>
+    <a href="#contacts" data-i18n="nav.contacts">Контакты</a>
+  </nav>
+
   </div>
 </header>
 
 
-    <!-- Главная -->
-    <section id="home" class="hero">
-      <div>
-        <h1>Производитель щебня, песка и строительных материалов</h1>
-        <p class="muted">Основано в 1957 году. Мощности переработки бутового камня — до 1 000 000 тонн в год.</p>
-        <a class="cta" href="#contacts">Связаться с нами</a>
+  <section id="home" class="hero">
+  <div>
+    <h1 data-i18n="home.title">Производитель щебня, песка и строительных материалов</h1>
+    <p class="muted" data-i18n="home.subtitle">Основано в 1957 году. Мощности переработки бутового камня — до 1 000 000 тонн в год.</p>
+    <a class="cta" href="#contacts" data-i18n="home.cta">Связаться с нами</a>
 
-        <div class="grid-3">
-          <div class="card"><strong>Качество</strong><div class="small muted">Контроль качества и сертификация продукции по ГОСТ и международным стандартам.</div></div>
-          <div class="card"><strong>Поставки</strong><div class="small muted">Обеспечиваем строительные объекты по всему Казахстану.</div></div>
-        </div>
+    <div class="grid-3">
+      <div class="card">
+        <strong data-i18n="home.card1Title">Качество</strong>
+        <div class="small muted" data-i18n="home.card1Text">Контроль качества и сертификация продукции по ГОСТ и международным стандартам.</div>
       </div>
-    </section>
+
+      <div class="card">
+        <strong data-i18n="home.card2Title">Поставки</strong>
+        <div class="small muted" data-i18n="home.card2Text">Обеспечиваем строительные объекты по всему Казахстану.</div>
+      </div>
+    </div>
+  </div>
+</section>
 
     <!-- О предприятии -->
-    <section id="services" class="section">
+<section id="services" class="section">
   <div class="wrap">
-    <h2>О предприятии</h2>
+    <h2 data-i18n="section.aboutTitle">О предприятии</h2>
 
     <div class="about-company-content">
       <div class="about-text">
-        <p class="muted">
+        <p data-i18n="section.aboutText">
           ТОО «АКНМ ТК» — одно из старейших предприятий строительной отрасли Казахстана. Основано в 1957 году как Алма-Атинский комбинат нерудных материалов (АКНМ).
           Сегодня предприятие специализируется на добыче, переработке и поставке щебня, песка, песчано-гравийных смесей и бетонных изделий.
         </p>
@@ -71,41 +82,42 @@
 
     <div class="cards">
       <div class="card">
-        <strong>Мощности</strong>
-        <p class="small muted">
+        <strong data-i18n="section.capacityTitle">Мощности</strong>
+        <p class="small muted" data-i18n="section.capacityText">
           Годовая мощность переработки бутового камня — до <b>1 000 000 тонн</b>.
           Производственная база — более 15 гектаров. Современные дробильно-сортировочные линии Sandvik и HYDROCONE.
         </p>
       </div>
 
       <div class="card">
-        <strong>Контроль качества</strong>
-        <p class="small muted">
+        <strong data-i18n="section.qualityTitle">Контроль качества</strong>
+        <p class="small muted" data-i18n="section.qualityText">
           Продукция сертифицирована и проходит регулярную лабораторную проверку. Контроль подтверждён британской лабораторией «SANDBERG» (Лондон).
         </p>
       </div>
     </div>
   </div>
 </section>
-
-    <!-- Анализ рынка -->
+<!-- Анализ рынка -->
 <section id="market-analysis" class="section">
   <div class="wrap">
-    <h2>Анализ рынка</h2>
+    <h2 data-i18n="section.marketTitle">Анализ рынка</h2>
 
     <div class="analysis-content">
       <div class="analysis-text">
         <div class="analysis-card">
-          <h3>Обзор рынка</h3>
-          <p>Доля ТОО «АКНМ ТК» в Алматы и Алматинской области более 40%</p>
+          <h3 data-i18n="section.marketOverviewTitle">Обзор рынка</h3>
+          <p data-i18n="section.marketOverviewText">Доля ТОО «АКНМ ТК» в Алматы и Алматинской области более 40%</p>
 
-          <h3>Конкурентная среда</h3>
-          <p>Ключевое конкурентное преимущество: Уникальность породы парфирит М–1200+</p>
-          <p>По шкале протодьяконова 2 категория коэффициент крепости 15, технология переработки камня, широкий ассортимент продукции.</p>
+          <h3 data-i18n="section.marketCompetitionTitle">Конкурентная среда</h3>
+          <p data-i18n="section.marketCompetitionText1">Ключевое конкурентное преимущество: Уникальность породы парфирит М–1200+</p>
+          <p data-i18n="section.marketCompetitionText2">По шкале Протодьяконова — 2 категория, коэффициент крепости 15. Технология переработки камня и широкий ассортимент продукции.</p>
 
-          <h3>Тенденции и возможности</h3>
-          <p>Растущий спрос на экологически чистые и прочные строительные материалы.<br>
-          Возможности для экспорта продукции в страны Центральной Азии.</p>
+          <h3 data-i18n="section.marketTrendsTitle">Тенденции и возможности</h3>
+          <p data-i18n="section.marketTrendsText">
+            Растущий спрос на экологически чистые и прочные строительные материалы.<br>
+            Возможности для экспорта продукции в страны Центральной Азии.
+          </p>
         </div>
       </div>
 
@@ -115,7 +127,6 @@
     </div>
   </div>
 </section>
-
 <!-- География добычи -->
 <section id="geography" class="section">
   <div class="wrap">
@@ -135,7 +146,7 @@
       </div>
 
       <div class="geo-media" style="flex: 1 1 300px; display: flex; justify-content: center; align-items: flex-start;">
-        <video class="my-video" autoplay muted loop playsinline style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); cursor: pointer;">
+        <video class="my-video" autoplay muted loop playsinline style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
           <source src="video.mp4" type="video/mp4">
           Ваш браузер не поддерживает видео.
         </video>
@@ -143,6 +154,8 @@
 
     </div>
   </div>
+</section>
+
 </section>
 
 
@@ -593,6 +606,6 @@ document.addEventListener("DOMContentLoaded", () => {
   </div>
 
   <script src="main.js?v=2"></script>
-  <script src="lang/langSwitcher.js"></script>
+  <script src="languages.js"></script>
 </body>
 </html>
