@@ -58,8 +58,9 @@ header {
   justify-content: center;
   font-weight: 700;
   color: var(--accent);
-  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15); /* чуть более заметная тень */
 }
+
 .logo img {
   width: 85px;   /* конкретная ширина картинки */
   height: auto;  /* сохраняем пропорции */
