@@ -1248,7 +1248,7 @@ button,
   }
 .whatsapp-button {
     font-size: 20px !important;         /* увеличиваем шрифт */
-    padding: 10px 22px !important;      /* делаем кнопку шире и выше */
+    padding: 8px 18px !important;      /* делаем кнопку шире и выше */
     border-radius: 10px !important;     /* скругляем края */
     display: inline-block !important;   /* гарантируем корректное отображение */
     text-align: center !important;      /* выравниваем текст */
