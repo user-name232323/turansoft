@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.style.opacity = '1';
     }
   };
-  
 
+  // === ОТПРАВКА ФОРМЫ ===
   if (form) {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
@@ -95,6 +95,79 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(autoScroll, 30);
   }
-  
-});
 
+ // === УВЕЛИЧЕНИЕ ИЗОБРАЖЕНИЙ ПРОДУКЦИИ ===
+const productCards = document.querySelectorAll('.product-card');
+if (productCards.length) {
+  const modal = document.createElement('div');
+  modal.id = 'imgModal';
+  modal.style.cssText = `
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.9);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  `;
+  modal.innerHTML = `<img style="max-width:90%; max-height:90%; border-radius:12px; box-shadow:0 0 30px rgba(0,0,0,0.6);">`;
+  document.body.appendChild(modal);
+
+  const modalImg = modal.querySelector('img');
+
+  productCards.forEach(card => {
+    card.style.cursor = 'zoom-in';
+    card.addEventListener('click', () => {
+      const bg = card.style.backgroundImage;
+      const url = bg.slice(5, -2); // вырезаем из 'url("pag1.jpg")'
+      modalImg.src = url;
+      modal.style.display = 'flex';
+    });
+  });
+
+  modal.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  // === ПРОСМОТР ВИДЕО В ПОЛНОЭКРАННОМ РЕЖИМЕ СО ЗВУКОМ ===
+const videos = document.querySelectorAll('.my-video');
+if (videos.length) {
+  const videoModal = document.createElement('div');
+  videoModal.id = 'videoModal';
+  videoModal.style.cssText = `
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.85);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  `;
+  videoModal.innerHTML = `
+    <video controls autoplay style="max-width:90%; max-height:90%; border-radius:10px; background:#000;">
+      <source src="" type="video/mp4">
+      Ваш браузер не поддерживает видео.
+    </video>
+  `;
+  document.body.appendChild(videoModal);
+
+  const modalVideo = videoModal.querySelector('video');
+  const modalSource = modalVideo.querySelector('source');
+
+  videos.forEach(v => {
+    v.addEventListener('click', () => {
+      modalSource.src = v.querySelector('source').src;
+      modalVideo.load();
+      videoModal.style.display = 'flex';
+      modalVideo.play();
+    });
+  });
+
+  videoModal.addEventListener('click', (e) => {
+    if (e.target === videoModal) {
+      modalVideo.pause();
+      videoModal.style.display = 'none';
+    }
+  });
+}
+}
+});
