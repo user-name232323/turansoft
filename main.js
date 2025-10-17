@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
       submitBtn.style.opacity = '1';
     }
   };
+  
 
   if (form) {
     form.addEventListener('submit', (e) => {
@@ -94,4 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }
     setInterval(autoScroll, 30);
   }
+  
 });
+
