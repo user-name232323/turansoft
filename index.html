@@ -468,16 +468,15 @@ document.addEventListener("DOMContentLoaded", () => {
 <!-- Галерея -->
 <section id="gallery" class="section" style="padding: 60px 0; background: #f9fafb;">
   <div class="wrap" style="max-width: 1100px; margin: 0 auto; text-align: center;">
-    <h2 style="margin-bottom: 25px; font-size: 28px;">Галерея</h2>
+  <h2 data-i18n="section.galleryTitle" style="margin-bottom: 25px; font-size: 28px;">Галерея</h2>
 
-    <div id="autoGallery" style="display: flex; gap: 14px; overflow-x: auto; scroll-behavior: smooth; white-space: nowrap;">
-      <img src="image1.png" alt="Производственный цех" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image2.png" alt="Оборудование на стройке" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image3.png" alt="Щебень" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image4.png" alt="Строительная техника" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image5.png" alt="Производственный цех 2" style="width:280px; height:200px; flex:0 0 auto;">
-    </div>
-  </div>
+<div id="autoGallery" style="display: flex; gap: 14px; overflow-x: auto; scroll-behavior: smooth; white-space: nowrap;">
+  <img src="image1.png" data-i18n-alt="gallery.img1.alt" style="width:280px; height:200px; flex:0 0 auto;">
+  <img src="image2.png" data-i18n-alt="gallery.img2.alt" style="width:280px; height:200px; flex:0 0 auto;">
+  <img src="image3.png" data-i18n-alt="gallery.img3.alt" style="width:280px; height:200px; flex:0 0 auto;">
+  <img src="image4.png" data-i18n-alt="gallery.img4.alt" style="width:280px; height:200px; flex:0 0 auto;">
+  <img src="image5.png" data-i18n-alt="gallery.img5.alt" style="width:280px; height:200px; flex:0 0 auto;">
+</div>
 
   <!-- Lightbox -->
   <div id="lightbox">
@@ -569,34 +568,34 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
    
-   <!-- Контакты -->
+  <!-- Контакты -->
 <section id="contacts" class="section">
   <div class="wrap contacts-container">
-    <h2>Контакты</h2>
+    <h2 data-i18n="section.contactsTitle">Контакты</h2>
 
     <div class="contacts-grid">
       <div class="contact-info">
-        <p><strong>Адрес:</strong><br> РК, Алматинская обл., Талгарский р-н, с. Бесагаш, ул. Чехова 9г</p>
-        <p><strong>Телефоны:</strong><br>
-          +7 (727) 387‒40‒02<br>
-          +7‒775‒734‒12‒13<br>
+        <p><strong data-i18n="contacts.addressLabel">Адрес:</strong><br data-i18n="contacts.address">РК, Алматинская обл., Талгарский р-н, с. Бесагаш, ул. Чехова 9г</p>
+        <p><strong data-i18n="contacts.phoneLabel">Телефоны:</strong><br>
+          <span data-i18n="contacts.phone1">+7 (727) 387‒40‒02</span><br>
+          <span data-i18n="contacts.phone2">+7‒775‒734‒12‒13</span><br>
         </p>
-        <p><strong>Email:</strong> aknm-tk@bk.ru</p>
+        <p><strong data-i18n="contacts.emailLabel">Email:</strong> <span data-i18n="contacts.email">aknm-tk@bk.ru</span></p>
         <iframe title="Карта" src="https://www.google.com/maps?q=Бесагаш,+ул.+Чехова,+9г&output=embed" width="100%" height="250" style="border:0;border-radius:8px"></iframe>
       </div>
 
       <form id="contactForm" class="contact-form">
-        <input type="text" id="name" placeholder="Имя" required>
-        <input type="text" id="phone" placeholder="Телефон" required>
-        <input type="email" id="email" placeholder="Email" required>
-        <textarea id="message" rows="4" placeholder="Сообщение" required></textarea>
-        <button type="submit">Отправить</button>
+        <input type="text" id="name" placeholder="Имя" data-i18n-placeholder="contacts.name" required>
+        <input type="text" id="phone" placeholder="Телефон" data-i18n-placeholder="contacts.phone" required>
+        <input type="email" id="email" placeholder="Email" data-i18n-placeholder="contacts.emailInput" required>
+        <textarea id="message" rows="4" placeholder="Сообщение" data-i18n-placeholder="contacts.message" required></textarea>
+        <button type="submit" data-i18n="contacts.sendButton">Отправить</button>
         <p id="formStatus" class="small muted"></p>
       </form>
 
       <div class="whatsapp-contact">
         <a href="https://wa.me/77757341213?text=Здравствуйте,%20я%20хочу%20узнать%20стоимость%20и%20условия%20поставки%20строительных%20материалов." 
-          class="whatsapp-button" target="_blank">
+          class="whatsapp-button" target="_blank" data-i18n="contacts.whatsappButton">
           Написать в WhatsApp
         </a>
       </div>
