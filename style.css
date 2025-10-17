@@ -622,7 +622,7 @@ nav a:hover {
 .lang-switcher {
   display: flex !important;
   justify-content: flex-end !important;
-  gap: 12px !important;
+  gap: 8px !important;
   padding: 10px !important;
 }
 
@@ -789,13 +789,17 @@ footer {
 
 /* ==== АДАПТИВ ==== */
 /* ==== Мобильные стили (до 600px) ==== */
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   /* --- Логотип --- */
   .logo {
     width: 80px !important; /* Увеличим немного для читаемости */
     height: auto !important;
     margin: 0 auto; /* Центрируем */
     display: block;
+  }
+    .lang-switcher {
+    padding-right: 20px !important; /* увеличиваем отступ справа */
+    /* или можно margin-right: 20px !important; если контейнер фиксирован */
   }
 
   .logo img.logo-img {
