@@ -112,12 +112,12 @@
 </section>
 
 <!-- География добычи -->
-<!-- География добычи -->
 <section id="geography" class="section">
   <div class="wrap">
     <h2>География добычи</h2>
-    <div class="geo-content">
-      <div class="geo-text">
+    <div class="geo-content" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: flex-start;">
+      
+      <div class="geo-text" style="flex: 1 1 400px; min-width: 300px;">
         <div class="geo-card">
           <p>ТОО «АКНМ ТК» разрабатывает карьеры и производит высококачественную продукцию в основном регионе Казахстана с суммарными запасами:</p>
           <ul>
@@ -129,11 +129,17 @@
         </div>
       </div>
 
-      <div class="geo-image">
-        <img src="image26.png" alt="География добычи">
+      <div class="geo-media" style="flex: 1 1 300px; display: flex; justify-content: center; align-items: flex-start;">
+        <video class="my-video" autoplay muted loop playsinline style="width: 100%; max-width: 300px; height: auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+          <source src="video.mp4" type="video/mp4">
+          Ваш браузер не поддерживает видео.
+        </video>
       </div>
+
     </div>
   </div>
+</section>
+
 </section>
 
 
@@ -411,46 +417,47 @@
       </div>
     </section>
 
-    <!-- Галерея -->
-<section id="gallery" class="section" style="padding: 60px 0; background: #f9fafb;">
-  <div class="wrap" style="max-width: 1100px; margin: 0 auto; text-align: center;">
-    <h2 style="margin-bottom: 25px; font-size: 28px;">Галерея</h2>
 
-    <div id="autoGallery" 
-         style="display: flex; gap: 14px; overflow-x: auto; scroll-behavior: smooth; white-space: nowrap;">
-      <img src="image1.png" alt="Производственный цех" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image2.png" alt="Оборудование на стройке" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image3.png" alt="Щебень" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image4.png" alt="Строительная техника" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image5.png" alt="Производственный цех 2" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image6.png" alt="Щебень 2" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image7.png" alt="Техника 2" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image8.png" alt="Цех 3" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image9.png" alt="Оборудование 3" style="width:280px; height:200px; flex:0 0 auto;">
-      <img src="image10.png" alt="Щебень 3" style="width:280px; height:200px; flex:0 0 auto;">
-    </div>
-  </div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const gallery = document.getElementById('autoGallery');
-      if (!gallery) return;
+<style>
+  /* Скрываем полосу прокрутки */
+  #autoGallery::-webkit-scrollbar { display: none; }
+  #autoGallery { scrollbar-width: none; }
 
-      let scrollAmount = 0;
-      function autoScroll() {
-        if (!gallery.matches(':hover')) {
-          scrollAmount += 1;
-          gallery.scrollLeft = scrollAmount;
-          if (scrollAmount >= gallery.scrollWidth - gallery.clientWidth) {
-            scrollAmount = 0;
-          }
-        }
-      }
-      setInterval(autoScroll, 30);
-    });
-  </script>
-</section>
+  /* Анимация при наведении */
+  #autoGallery img {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+  }
 
+  #autoGallery img:hover {
+    transform: scale(1.05);
+  }
+
+  /* Lightbox flex */
+  #lightbox {
+    display: none;  /* по умолчанию скрыт */
+    display: flex;
+  }
+</style>
+
+<style>
+  /* Скрываем полосу прокрутки */
+  #autoGallery::-webkit-scrollbar { display: none; }
+  #autoGallery { scrollbar-width: none; }
+
+  /* Анимация при наведении на картинку */
+  #autoGallery img {
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+
+  #autoGallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
 <style>
   /* Скрываем полосу прокрутки */
   #autoGallery::-webkit-scrollbar {
@@ -500,7 +507,7 @@
           +7 (727) 387‒40‒02<br>
           +7‒775‒734‒12‒13<br>
         </p>
-        <p><strong>Email:</strong>aknm-tk@bk.ru</p>
+        <p><strong>Email:</strong> aknm-tk@bk.ru</p>
         <iframe title="Карта" src="https://www.google.com/maps?q=Бесагаш,+ул.+Чехова,+9г&output=embed" width="100%" height="250" style="border:0;border-radius:8px"></iframe>
       </div>
 

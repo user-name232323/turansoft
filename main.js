@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
       status.textContent = 'Подготавливаем письмо...';
 
       const domain = email.split('@')[1].toLowerCase();
-      const toMail = 'info@aknm.example';
+      const toMail = 'aknm-tk@bk.ru';
       const subject = `Запрос с сайта — ${name}`;
       const body = `Имя: ${name}\nТелефон: ${phone}\nEmail: ${email}\n\nСообщение:\n${message}`;
       const encode = encodeURIComponent;
