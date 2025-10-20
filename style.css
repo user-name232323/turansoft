@@ -1238,7 +1238,7 @@ button,
     gap: 10px !important;
   }
 
-  .about-company-content + .cards .card {
+  .about-company-content + .cards .card { 
     padding: 10px !important;
     font-size: 0.9rem !important;
   }
