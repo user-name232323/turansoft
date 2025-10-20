@@ -889,7 +889,11 @@ footer {
 
 .products-grid {
   display: grid !important;
+<<<<<<< HEAD
   grid-template-columns: repeat(2, 1fr) !important;
+=======
+  grid-template-columns: repeat(3, 1fr) !important; /* ровно 3 колонки */
+>>>>>>> 92ba327
   gap: 25px !important;
 }
 
