@@ -895,7 +895,7 @@ footer {
 
 .products-grid {
   display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+  grid-template-columns: repeat(3, 1fr) !important; /* ровно 3 колонки */
   gap: 25px !important;
 }
 
