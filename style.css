@@ -910,6 +910,7 @@ footer {
   cursor: pointer !important;
   transition: transform 0.3s ease !important;
 }
+
 .product-card:hover {
   transform: scale(1.03) !important;
 }
@@ -924,6 +925,7 @@ footer {
   padding: 12px !important;
   text-align: center !important;
 }
+
 .product-card:hover .overlay {
   background: rgba(251,191,36,0.9) !important;
   color: #fff !important;
