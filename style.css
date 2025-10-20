@@ -893,26 +893,10 @@ footer {
   border-radius: 4px;
 }
 
-.products-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-  gap: 25px !important;
-}
-
-.product-card {
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center !important;
-  height: 250px !important;
-  border-radius: 12px !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-  cursor: pointer !important;
-  transition: transform 0.3s ease !important;
-}
-.product-card:hover {
-  transform: scale(1.03) !important;
-}
+  
+  .products-grid .product-card {
+    max-width: 100% !important;
+  }
 
 .overlay {
   position: absolute !important;
@@ -1108,6 +1092,13 @@ footer {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
+ /* ПРАВИЛЬНО - оставляем только ЭТО правило */
+  .products-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 колонки */
+    gap: 10px !important;
+    justify-items: center !important;
+  }
 
 .ach-card:hover {
   transform: translateY(-6px);
