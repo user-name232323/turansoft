@@ -750,6 +750,7 @@ footer {
 }
 
 /* ==== МОБИЛЬНАЯ АДАПТАЦИЯ ==== */
+/* ==== МОБИЛЬНАЯ АДАПТАЦИЯ ==== */
 @media (max-width: 600px) {
   /* === ОСНОВНЫЕ ОТСТУПЫ === */
   .wrap {
@@ -769,6 +770,56 @@ footer {
   .overlay {
     padding: 12px !important;
     font-size: 14px !important;
+  }
+
+  /* === ДОСТИЖЕНИЯ И КЛЮЧЕВЫЕ ПРОЕКТЫ - СЕТКА 2x2 === */
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 КОЛОНКИ */
+    gap: 15px !important;
+    margin: 20px 0 !important;
+  }
+
+  .ach-card {
+    max-width: 100% !important;
+    aspect-ratio: 1 / 1 !important; /* КВАДРАТНЫЕ КАРТОЧКИ */
+    height: auto !important;
+  }
+
+  .ach-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  /* === ПРОЕКТЫ - СЕТКА 2x2 === */
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 1fr) !important; /* 2 КОЛОНКИ */
+    gap: 15px !important;
+    justify-items: center !important;
+    margin: 20px 0 !important;
+  }
+
+  .projects-grid .project-card {
+    text-align: center !important;
+    padding: 15px 10px !important;
+    box-sizing: border-box !important;
+    width: 100% !important;
+  }
+
+  .projects-grid img {
+    width: 100% !important;
+    height: 120px !important; /* ФИКСИРОВАННАЯ ВЫСОТА */
+    border-radius: 8px !important;
+    object-fit: cover !important;
+  }
+
+  .project-text {
+    padding: 10px 5px !important;
+    font-weight: 600 !important;
+    color: #333 !important;
+    font-size: 14px !important;
+    line-height: 1.3 !important;
   }
 
   /* === HEADER === */
@@ -817,8 +868,8 @@ footer {
   /* === GRID 3 - ОДНА КОЛОНКА ДЛЯ ПРОСТРАНСТВА === */
   #home .grid-3 {
     display: grid !important;
-    grid-template-columns: 1fr !important; /* ИЗМЕНИЛ НА 1 КОЛОНКУ */
-    gap: 20px !important; /* УВЕЛИЧИЛ ОТСТУП */
+    grid-template-columns: 1fr !important;
+    gap: 20px !important;
     align-items: stretch !important;
     margin: 25px 0 !important;
   }
@@ -828,15 +879,15 @@ footer {
     flex-direction: column !important;
     justify-content: center !important;
     text-align: center !important;
-    padding: 25px 20px !important; /* УВЕЛИЧИЛ PADDING */
+    padding: 25px 20px !important;
     box-sizing: border-box !important;
     height: auto !important;
-    min-height: 140px !important; /* ДОБАВИЛ МИНИМАЛЬНУЮ ВЫСОТУ */
+    min-height: 140px !important;
     margin: 0 5px !important;
   }
 
   #home .grid-3 .card h3 {
-    font-size: 20px !important; /* УВЕЛИЧИЛ ШРИФТ */
+    font-size: 20px !important;
     margin-bottom: 12px !important;
   }
 
@@ -844,82 +895,52 @@ footer {
     white-space: normal !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    font-size: 15px !important; /* УВЕЛИЧИЛ ШРИФТ */
-    line-height: 1.5 !important; /* УВЕЛИЧИЛ МЕЖСТРОЧНЫЙ */
+    font-size: 15px !important;
+    line-height: 1.5 !important;
     padding: 0 5px !important;
   }
 
   /* === ОБЩИЕ CARDS === */
   .card {
-    padding: 25px 20px !important; /* УВЕЛИЧИЛ PADDING */
+    padding: 25px 20px !important;
     margin: 15px 0 !important;
     border-left: 5px solid #1f5fbf !important;
   }
 
   .card p {
-    font-size: 15px !important; /* УВЕЛИЧИЛ ШРИФТ */
-    line-height: 1.5 !important; /* УВЕЛИЧИЛ МЕЖСТРОЧНЫЙ */
+    font-size: 15px !important;
+    line-height: 1.5 !important;
     white-space: normal !important;
   }
 
   /* === GALLERY === */
   .gallery {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important; /* УВЕЛИЧИЛ ОТСТУП */
+    gap: 15px !important;
     margin: 25px 0 !important;
   }
 
   .gallery img {
     width: 100% !important;
-    height: 160px !important; /* ФИКСИРОВАННАЯ ВЫСОТА */
+    height: 160px !important;
     border-radius: 10px !important;
   }
 
   /* === WHATSAPP BUTTON === */
   .whatsapp-button {
     font-size: 18px !important;
-    padding: 14px 24px !important; /* УВЕЛИЧИЛ PADDING */
+    padding: 14px 24px !important;
     border-radius: 12px !important;
     display: inline-block !important;
     text-align: center !important;
     margin: 15px 0 !important;
   }
 
-  /* === PROJECTS GRID === */
-  .projects-grid {
-    display: grid !important;
-    grid-template-columns: 1fr !important; /* ИЗМЕНИЛ НА 1 КОЛОНКУ */
-    gap: 20px !important; /* УВЕЛИЧИЛ ОТСТУП */
-    justify-items: center !important;
-    margin: 25px 0 !important;
-  }
-
-  .projects-grid img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 100% !important; /* УБРАЛ ОГРАНИЧЕНИЕ */
-    border-radius: 10px !important;
-    object-fit: cover !important;
-  }
-
-  .projects-grid .project-card {
-    text-align: center !important;
-    padding: 20px 15px !important; /* УВЕЛИЧИЛ PADDING */
-    box-sizing: border-box !important;
-  }
-
-  .project-text {
-    padding: 15px !important; /* УВЕЛИЧИЛ PADDING */
-    font-weight: 600 !important;
-    color: #333 !important;
-    font-size: 16px !important; /* УВЕЛИЧИЛ ШРИФТ */
-  }
-
   /* === CTA BUTTONS === */
   .cta,
   button {
     font-size: 17px !important;
-    padding: 14px 22px !important; /* УВЕЛИЧИЛ PADDING */
+    padding: 14px 22px !important;
     margin: 10px 0 !important;
   }
 }
@@ -930,13 +951,28 @@ footer {
     padding: 15px 12px !important;
   }
   
+  /* НА ОЧЕНЬ УЗКИХ ВСЕ РАВНО 2 КОЛОНКИ */
   .product-flex {
-    grid-template-columns: 1fr !important; /* 1 КОЛОНКА НА ОЧЕНЬ УЗКИХ */
-    gap: 12px !important;
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
   }
   
   .product-card {
-    height: 160px !important;
+    height: 150px !important;
+  }
+
+  .achievements-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .projects-grid img {
+    height: 100px !important;
   }
 
   #home .grid-3 .card {
@@ -945,6 +981,11 @@ footer {
   }
 
   .gallery {
-    grid-template-columns: 1fr !important; /* 1 КОЛОНКА НА ОЧЕНЬ УЗКИХ */
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 10px !important;
+  }
+
+  .gallery img {
+    height: 140px !important;
   }
 }
