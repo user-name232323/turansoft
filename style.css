@@ -751,6 +751,11 @@ footer {
 
 /* ==== МОБИЛЬНАЯ АДАПТАЦИЯ ==== */
 @media (max-width: 600px) {
+  /* === ОСНОВНЫЕ ОТСТУПЫ === */
+  .wrap {
+    padding: 20px 15px !important;
+  }
+  
   /* === PRODUCT FLEX СЕТКА 2x2 === */
   .product-flex {
     grid-template-columns: repeat(2, 1fr) !important;
@@ -758,14 +763,20 @@ footer {
   }
   
   .product-card {
-    height: 200px !important;
+    height: 180px !important;
+  }
+
+  .overlay {
+    padding: 12px !important;
+    font-size: 14px !important;
   }
 
   /* === HEADER === */
   header {
     flex-direction: column !important;
     align-items: center !important;
-    gap: 12px;
+    gap: 15px !important;
+    padding: 15px 0 !important;
   }
 
   nav {
@@ -775,8 +786,9 @@ footer {
 
   nav a {
     display: inline-block;
-    margin: 0 10px 10px;
+    margin: 0 12px 12px;
     font-size: 16px;
+    padding: 8px 0;
   }
 
   .logo {
@@ -785,102 +797,30 @@ footer {
     margin: 0 auto;
   }
 
-  .logo img.logo-img {
-    max-width: 100%;
-    height: auto;
-  }
-
   /* === HERO === */
   .hero {
-    padding: 20px 10px !important;
+    padding: 30px 15px !important;
     text-align: center !important;
   }
 
   .hero h1 {
-    font-size: 24px !important;
+    font-size: 26px !important;
+    margin-bottom: 15px !important;
   }
 
   .hero p {
     font-size: 16px !important;
     padding: 0 10px;
+    margin-bottom: 20px !important;
   }
 
-  /* === CARDS === */
-  .card {
-    padding-bottom: 30px;
-    border-bottom: 3px solid #1f5fbf;
-  }
-
-  .card p {
-    font-size: 14px !important;
-    line-height: 1.4 !important;
-    white-space: normal !important;
-  }
-
-  .card p:last-child {
-    margin-bottom: 30px;
-  }
-
-  /* === GALLERY === */
-  .gallery {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-  }
-
-  .gallery img {
-    width: 100% !important;
-    height: auto !important;
-    border-radius: 8px;
-  }
-
-  /* === WHATSAPP BUTTON === */
-  .whatsapp-button {
-    font-size: 20px !important;
-    padding: 8px 18px !important;
-    border-radius: 10px !important;
-    display: inline-block !important;
-    text-align: center !important;
-  }
-
-  /* === PROJECTS GRID === */
-  .projects-grid {
-    display: grid !important;
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
-    justify-items: center !important;
-  }
-
-  .projects-grid img {
-    width: 100% !important;
-    height: auto !important;
-    max-width: 160px !important;
-    border-radius: 8px !important;
-    object-fit: cover !important;
-  }
-
-  .projects-grid .project-card {
-    text-align: center !important;
-    padding: 8px !important;
-    box-sizing: border-box !important;
-  }
-
-  .project-card:hover {
-    transform: scale(1.03) !important;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.15) !important;
-  }
-
-  .project-text {
-    padding: 10px !important;
-    font-weight: 600 !important;
-    color: #333 !important;
-  }
-
-  /* === GRID 3 === */
+  /* === GRID 3 - ОДНА КОЛОНКА ДЛЯ ПРОСТРАНСТВА === */
   #home .grid-3 {
     display: grid !important;
-    grid-template-columns: 1fr 1fr !important;
-    gap: 10px !important;
+    grid-template-columns: 1fr !important; /* ИЗМЕНИЛ НА 1 КОЛОНКУ */
+    gap: 20px !important; /* УВЕЛИЧИЛ ОТСТУП */
     align-items: stretch !important;
+    margin: 25px 0 !important;
   }
 
   #home .grid-3 .card {
@@ -888,47 +828,123 @@ footer {
     flex-direction: column !important;
     justify-content: center !important;
     text-align: center !important;
-    padding: 12px !important;
+    padding: 25px 20px !important; /* УВЕЛИЧИЛ PADDING */
     box-sizing: border-box !important;
     height: auto !important;
+    min-height: 140px !important; /* ДОБАВИЛ МИНИМАЛЬНУЮ ВЫСОТУ */
+    margin: 0 5px !important;
+  }
+
+  #home .grid-3 .card h3 {
+    font-size: 20px !important; /* УВЕЛИЧИЛ ШРИФТ */
+    margin-bottom: 12px !important;
   }
 
   #home .grid-3 .card .muted {
     white-space: normal !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    font-size: 14px !important;
-    line-height: 1.4 !important;
+    font-size: 15px !important; /* УВЕЛИЧИЛ ШРИФТ */
+    line-height: 1.5 !important; /* УВЕЛИЧИЛ МЕЖСТРОЧНЫЙ */
+    padding: 0 5px !important;
+  }
+
+  /* === ОБЩИЕ CARDS === */
+  .card {
+    padding: 25px 20px !important; /* УВЕЛИЧИЛ PADDING */
+    margin: 15px 0 !important;
+    border-left: 5px solid #1f5fbf !important;
+  }
+
+  .card p {
+    font-size: 15px !important; /* УВЕЛИЧИЛ ШРИФТ */
+    line-height: 1.5 !important; /* УВЕЛИЧИЛ МЕЖСТРОЧНЫЙ */
+    white-space: normal !important;
+  }
+
+  /* === GALLERY === */
+  .gallery {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 15px !important; /* УВЕЛИЧИЛ ОТСТУП */
+    margin: 25px 0 !important;
+  }
+
+  .gallery img {
+    width: 100% !important;
+    height: 160px !important; /* ФИКСИРОВАННАЯ ВЫСОТА */
+    border-radius: 10px !important;
+  }
+
+  /* === WHATSAPP BUTTON === */
+  .whatsapp-button {
+    font-size: 18px !important;
+    padding: 14px 24px !important; /* УВЕЛИЧИЛ PADDING */
+    border-radius: 12px !important;
+    display: inline-block !important;
+    text-align: center !important;
+    margin: 15px 0 !important;
+  }
+
+  /* === PROJECTS GRID === */
+  .projects-grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important; /* ИЗМЕНИЛ НА 1 КОЛОНКУ */
+    gap: 20px !important; /* УВЕЛИЧИЛ ОТСТУП */
+    justify-items: center !important;
+    margin: 25px 0 !important;
+  }
+
+  .projects-grid img {
+    width: 100% !important;
+    height: auto !important;
+    max-width: 100% !important; /* УБРАЛ ОГРАНИЧЕНИЕ */
+    border-radius: 10px !important;
+    object-fit: cover !important;
+  }
+
+  .projects-grid .project-card {
+    text-align: center !important;
+    padding: 20px 15px !important; /* УВЕЛИЧИЛ PADDING */
+    box-sizing: border-box !important;
+  }
+
+  .project-text {
+    padding: 15px !important; /* УВЕЛИЧИЛ PADDING */
+    font-weight: 600 !important;
+    color: #333 !important;
+    font-size: 16px !important; /* УВЕЛИЧИЛ ШРИФТ */
   }
 
   /* === CTA BUTTONS === */
   .cta,
   button {
-    font-size: 16px !important;
-    padding: 10px 18px !important;
-  }
-
-  .lang-switcher {
-    padding-right: 5px !important;
+    font-size: 17px !important;
+    padding: 14px 22px !important; /* УВЕЛИЧИЛ PADDING */
+    margin: 10px 0 !important;
   }
 }
 
-/* === Улучшения для очень узких экранов === */
+/* === ДЛЯ ОЧЕНЬ УЗКИХ ЭКРАНОВ === */
 @media (max-width: 400px) {
-  .wrap,
-  .projects-grid,
-  .achievements-grid,
-  .products-grid,
-  .gallery,
-  .cards,
-  .grid-3 {
-    grid-template-columns: 1fr;
+  .wrap {
+    padding: 15px 12px !important;
+  }
+  
+  .product-flex {
+    grid-template-columns: 1fr !important; /* 1 КОЛОНКА НА ОЧЕНЬ УЗКИХ */
+    gap: 12px !important;
+  }
+  
+  .product-card {
+    height: 160px !important;
   }
 
-  button,
-  .cta,
-  .whatsapp-button {
-    font-size: 11px;
-    padding: 5px 8px;
+  #home .grid-3 .card {
+    padding: 20px 15px !important;
+    min-height: 130px !important;
+  }
+
+  .gallery {
+    grid-template-columns: 1fr !important; /* 1 КОЛОНКА НА ОЧЕНЬ УЗКИХ */
   }
 }
