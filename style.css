@@ -754,12 +754,12 @@ footer {
 /* ==== МОБИЛЬНАЯ АДАПТАЦИЯ ==== */
 @media (max-width: 600px) {
   /* === HEADER - ЦЕНТРИРОВАНИЕ === */
-   header {
+    header {
     padding: 12px 0 !important;
   }
   
   .brand {
-    gap: 12px !important;
+    gap: 15px !important;
   }
   
   .logo {
@@ -767,27 +767,23 @@ footer {
     height: 60px !important;
   }
   
-  .logo img {
-    width: 70px !important;
-  }
-  
   nav {
+    flex-direction: column; /* ВЕРТИКАЛЬНО НА МОБИЛКЕ */
     gap: 8px !important;
   }
   
   nav a {
     font-size: 14px !important;
-    padding: 6px 10px !important;
+    padding: 10px 15px !important;
+    text-align: center;
+    background: rgba(31, 95, 191, 0.05);
+    border-radius: 8px;
+    transition: all 0.3s ease;
   }
-
-  nav a {
-    display: block !important;
-    margin: 0 !important;
-    padding: 8px 12px !important;
-    font-size: 15px !important;
-    text-align: center !important;
-    width: auto !important;
-    min-width: 200px !important;
+  
+  nav a:hover {
+    background: rgba(31, 95, 191, 0.1);
+    transform: translateY(-2px);
   }
 
   /* === УМЕНЬШЕНИЕ ОТСТУПОВ МЕЖДУ СЕКЦИЯМИ === */
