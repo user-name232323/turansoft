@@ -268,7 +268,7 @@
 <!-- Витрина продукции -->
 <section class="section">
   <div class="wrap">
-    <div class="products-grid">
+    <div class="product-flex">
       <div class="product-card" style="background-image: url('pid1.jpg')" data-image="pag1.jpg">
         <div class="overlay" data-i18n="productCard.1">Щебень фракции 5x20 (мытый)</div>
       </div>
@@ -307,10 +307,10 @@
       </div>
       <div class="product-card" style="background-image: url('pid13.jpg')" data-image="rel3.jpg">
         <div class="overlay" data-i18n="productCard.13">ПЩС (С1-0x40)</div>
+      </div>
     </div>
   </div>
 </section>
-
 
 <!-- Модальное окно для просмотра -->
 <div class="image-modal" id="imageModal">
@@ -319,11 +319,13 @@
 </div>
 
 <style>
-.products-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
+
+.product-flex {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) !important;
   gap: 25px !important;
 }
+
 .product-card {
   position: relative !important;
   background-size: cover !important;
@@ -335,9 +337,12 @@
   cursor: pointer !important;
   transition: transform 0.3s ease !important;
 }
+
 .product-card:hover {
   transform: scale(1.03) !important;
 }
+
+
 .overlay {
   position: absolute !important;
   bottom: 0 !important;
@@ -348,6 +353,7 @@
   padding: 12px !important;
   text-align: center !important;
 }
+
 .product-card:hover .overlay {
   background: rgba(251,191,36,0.9) !important;
   color: #fff !important;

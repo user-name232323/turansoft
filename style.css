@@ -790,6 +790,47 @@ footer {
 /* ==== АДАПТИВ ==== */
 /* ==== Мобильные стили (до 600px) ==== */
 @media (max-width: 600px) {
+    .product-flex {
+    grid-template-columns: 1fr !important;
+    gap: 12px !important;
+  }
+  
+  .product-card {
+    height: 180px !important;
+  }
+}
+
+.product-card {
+  position: relative !important;
+  background-size: cover !important;
+  background-position: center !important;
+  height: 250px !important;
+  border-radius: 12px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
+  cursor: pointer !important;
+  transition: transform 0.3s ease !important;
+}
+
+.product-card:hover {
+  transform: scale(1.03) !important;
+}
+
+.overlay {
+  position: absolute !important;
+  bottom: 0 !important;
+  width: 100% !important;
+  background: rgba(255,255,255,0.85) !important;
+  color: #1e293b !important;
+  font-weight: 600 !important;
+  padding: 12px !important;
+  text-align: center !important;
+}
+
+.product-card:hover .overlay {
+  background: rgba(251,191,36,0.9) !important;
+  color: #fff !important;
+
   /* --- Логотип --- */
   .logo {
     width: 80px !important; /* Увеличим немного для читаемости */
@@ -802,10 +843,14 @@ footer {
     /* или можно margin-right: 20px !important; если контейнер фиксирован */
   }
 
+
+
   .logo img.logo-img {
     max-width: 100%;
     height: auto;
   }
+
+
 
 .card {
   padding-bottom: 30px; /* отодвигает текст от нижней границы */
@@ -891,42 +936,6 @@ footer {
   background: var(--accent);
   margin: 12px auto 0;
   border-radius: 4px;
-}
-
-.products-grid {
-  display: grid !important;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)) !important;
-  gap: 25px !important;
-}
-
-.product-card {
-  position: relative !important;
-  background-size: cover !important;
-  background-position: center !important;
-  height: 250px !important;
-  border-radius: 12px !important;
-  overflow: hidden !important;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15) !important;
-  cursor: pointer !important;
-  transition: transform 0.3s ease !important;
-}
-.product-card:hover {
-  transform: scale(1.03) !important;
-}
-
-.overlay {
-  position: absolute !important;
-  bottom: 0 !important;
-  width: 100% !important;
-  background: rgba(255,255,255,0.85) !important;
-  color: #1e293b !important;
-  font-weight: 600 !important;
-  padding: 12px !important;
-  text-align: center !important;
-}
-.product-card:hover .overlay {
-  background: rgba(251,191,36,0.9) !important;
-  color: #fff !important;
 }
 
 /* ====== МОДАЛКА ====== */
@@ -1110,7 +1119,7 @@ footer {
 }
 
 .ach-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-40px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
@@ -1124,7 +1133,6 @@ footer {
 .wrap,
 .projects-grid,
 .achievements-grid,
-.products-grid,
 .gallery,
 .cards,
 .grid-3 {
