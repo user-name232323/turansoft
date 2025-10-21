@@ -754,27 +754,27 @@ footer {
 /* ==== МОБИЛЬНАЯ АДАПТАЦИЯ ==== */
 @media (max-width: 600px) {
   /* === HEADER - ЦЕНТРИРОВАНИЕ === */
-    header {
-    padding: 12px 0 !important;
+  header {
+    padding: 10px 0 !important;
   }
   
   .brand {
-    gap: 15px !important;
+    gap: 12px !important;
   }
   
   .logo {
-    width: 80px !important;
-    height: 60px !important;
+    width: 70px !important;
+    height: 50px !important;
   }
   
   nav {
-    flex-direction: column; /* ВЕРТИКАЛЬНО НА МОБИЛКЕ */
-    gap: 8px !important;
+    flex-direction: column;
+    gap: 6px !important;
   }
   
   nav a {
     font-size: 14px !important;
-    padding: 10px 15px !important;
+    padding: 8px 12px !important;
     text-align: center;
     background: rgba(31, 95, 191, 0.05);
     border-radius: 8px;
@@ -788,64 +788,50 @@ footer {
 
   /* === УМЕНЬШЕНИЕ ОТСТУПОВ МЕЖДУ СЕКЦИЯМИ === */
   .section {
-    margin-bottom: 25px !important;
-    padding: 10px 0 !important;
+    margin-bottom: 20px !important;
+    padding: 8px 0 !important;
   }
 
   .wrap {
-    padding: 15px !important;
+    padding: 12px !important;
   }
 
   /* === ЦЕНТРИРОВАНИЕ ЗАГОЛОВКОВ СЕКЦИЙ === */
   .section h2 {
     text-align: center !important;
-    font-size: 22px !important;
-    margin-bottom: 15px !important;
+    font-size: 20px !important;
+    margin-bottom: 12px !important;
     width: 100% !important;
   }
 
   /* === PRODUCT FLEX СЕТКА 2x2 === */
   .product-flex {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
   
   .product-card {
-    height: 160px !important;
+    height: 140px !important;
   }
 
   /* === ДОСТИЖЕНИЯ И ПРОЕКТЫ - СЕТКА 2x2 === */
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 12px !important;
+    gap: 10px !important;
   }
 
-  /* === ОСТАЛЬНЫЕ СТИЛИ === */
-  .hero {
-    padding: 20px 10px !important;
-  }
-
-  .hero h1 {
-    font-size: 24px !important;
-    text-align: center !important;
-  }
-
-  .hero p {
-    text-align: center !important;
-  }
-  
   /* === GRID 3 - ОДНА КОЛОНКА ДЛЯ ПРОСТРАНСТВА === */
   #home .grid-3 {
     display: grid !important;
     grid-template-columns: 1fr !important;
-    gap: 20px !important;
+    gap: 15px !important;
     align-items: stretch !important;
-    margin: 25px 0 !important;
+    margin: 20px 0 !important;
   }
 
   #home .grid-3 .card {
@@ -853,113 +839,112 @@ footer {
     flex-direction: column !important;
     justify-content: center !important;
     text-align: center !important;
-    padding: 25px 20px !important;
+    padding: 20px 15px !important;
     box-sizing: border-box !important;
     height: auto !important;
-    min-height: 140px !important;
-    margin: 0 5px !important;
+    min-height: 120px !important;
+    margin: 0 3px !important;
   }
 
   #home .grid-3 .card h3 {
-    font-size: 20px !important;
-    margin-bottom: 12px !important;
+    font-size: 18px !important;
+    margin-bottom: 8px !important;
   }
 
   #home .grid-3 .card .muted {
     white-space: normal !important;
     word-wrap: break-word !important;
     overflow-wrap: break-word !important;
-    font-size: 15px !important;
-    line-height: 1.5 !important;
-    padding: 0 5px !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    padding: 0 3px !important;
   }
 
   /* === ОБЩИЕ CARDS === */
   .card {
-    padding: 25px 20px !important;
-    margin: 15px 0 !important;
-    border-left: 5px solid #1f5fbf !important;
+    padding: 20px 15px !important;
+    margin: 12px 0 !important;
+    border-left: 4px solid #1f5fbf !important;
   }
 
   .card p {
-    font-size: 15px !important;
-    line-height: 1.5 !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
     white-space: normal !important;
   }
 
   /* === GALLERY === */
   .gallery {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 15px !important;
-    margin: 25px 0 !important;
+    gap: 12px !important;
+    margin: 20px 0 !important;
   }
 
   .gallery img {
     width: 100% !important;
-    height: 160px !important;
-    border-radius: 10px !important;
+    height: 140px !important;
+    border-radius: 8px !important;
   }
 
   /* === WHATSAPP BUTTON === */
   .whatsapp-button {
-    font-size: 18px !important;
-    padding: 14px 24px !important;
-    border-radius: 12px !important;
+    font-size: 16px !important;
+    padding: 12px 20px !important;
+    border-radius: 10px !important;
     display: inline-block !important;
     text-align: center !important;
-    margin: 15px 0 !important;
+    margin: 10px 0 !important;
   }
 
   /* === CTA BUTTONS === */
   .cta,
   button {
-    font-size: 17px !important;
-    padding: 14px 22px !important;
-    margin: 10px 0 !important;
+    font-size: 16px !important;
+    padding: 12px 18px !important;
+    margin: 8px 0 !important;
   }
 }
 
 /* === ДЛЯ ОЧЕНЬ УЗКИХ ЭКРАНОВ === */
 @media (max-width: 400px) {
   .wrap {
-    padding: 15px 12px !important;
+    padding: 10px 8px !important;
   }
   
-  /* НА ОЧЕНЬ УЗКИХ ВСЕ РАВНО 2 КОЛОНКИ */
   .product-flex {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
   
   .product-card {
-    height: 150px !important;
+    height: 120px !important;
   }
 
   .achievements-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
 
   .projects-grid {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
 
   .projects-grid img {
-    height: 100px !important;
+    height: 90px !important;
   }
 
   #home .grid-3 .card {
-    padding: 20px 15px !important;
-    min-height: 130px !important;
+    padding: 15px 12px !important;
+    min-height: 110px !important;
   }
 
   .gallery {
     grid-template-columns: repeat(2, 1fr) !important;
-    gap: 10px !important;
+    gap: 8px !important;
   }
 
   .gallery img {
-    height: 140px !important;
+    height: 120px !important;
   }
 }
