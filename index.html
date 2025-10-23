@@ -544,10 +544,23 @@ document.addEventListener("DOMContentLoaded", () => {
     <div class="contacts-grid">
       <div class="contact-info">
         <p><strong data-i18n="contacts.addressLabel">Адрес:</strong><br data-i18n="contacts.address">РК, Алматинская обл., Талгарский р-н, с. Бесагаш, ул. Чехова 9г</p>
-        <p><strong data-i18n="contacts.phoneLabel">Телефоны:</strong><br>
-          <span data-i18n="contacts.phone2">+7 775-734‒12‒13</span><br>
-          <span data-i18n="contacts.phone3">+7 778-981-44-08</span><br>
-        </p>
+        <p>
+  <strong data-i18n="contacts.phoneLabel">Телефоны:</strong>
+  <div class="phones-container">
+    <div class="phone-item">
+      <span class="phone-icon">📞</span>
+      <span data-i18n="contacts.phone1" class="phone-number">+7 (727) 387-40-02</span>
+    </div>
+    <div class="phone-item">
+      <span class="phone-icon">📱</span>
+      <span data-i18n="contacts.phone2" class="phone-number">+7 (775) 734-12-13</span>
+    </div>
+    <div class="phone-item">
+      <span class="phone-icon">📲</span>
+      <span data-i18n="contacts.phone3" class="phone-number">+7 (778) 981-44-08</span>
+    </div>
+  </div>
+</p>
         <p><strong data-i18n="contacts.emailLabel">Email:</strong> <span data-i18n="contacts.email">aknm-tk@bk.ru</span></p>
         <iframe title="Карта" src="https://www.google.com/maps?q=Бесагаш,+ул.+Чехова,+9г&output=embed" width="100%" height="250" style="border:0;border-radius:8px"></iframe>
       </div>
