@@ -187,6 +187,36 @@ nav a:hover {
   transform: scale(1.03);
 }
 
+phone-number {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif !important;
+  font-size: 16px;
+  font-weight: 500;
+  color: #1f5fbf;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 6px;
+  padding: 6px 0;
+}
+
+.phone-number::before {
+  content: "📞";
+  font-size: 14px;
+  filter: hue-rotate(180deg);
+}
+
+.phone-number:nth-child(2)::before {
+  content: "📱";
+}
+
+.phone-number:nth-child(3)::before {
+  content: "📲";
+}
+
+
+
+
+
 .overlay {
   position: absolute;
   bottom: 0;
@@ -669,6 +699,7 @@ nav a:hover {
   border: none;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
+
 
 .contact-form {
   flex: 1;
